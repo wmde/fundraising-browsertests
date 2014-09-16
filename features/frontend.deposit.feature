@@ -29,9 +29,9 @@ Feature: Check the deposit process on the frontend
     | 5 euro | 5,00 |
     | 15 euro | 15,00 |
     #| 25 euro | 25,00 |
+    #| 50 euro | 50,00 |
     #| 75 euro | 75,00 |
-    #| 150 euro | 150,00 |
-    #| 200 euro | 200,00 |
+    #| 100 euro | 100,00 |
     #| 250 euro | 250,00 |
 
   Scenario: Checks the receipt page functionality

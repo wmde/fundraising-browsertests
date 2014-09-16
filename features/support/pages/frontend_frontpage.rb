@@ -43,9 +43,9 @@ class FrontendFrontPage
       '5 euro' => 'amount-1',
       '15 euro' => 'amount-2',
       '25 euro' => 'amount-3',
-      '75 euro' => 'amount-4',
-      '150 euro' => 'amount-5',
-      '200 euro' => 'amount-6',
+      '50 euro' => 'amount-4',
+      '75 euro' => 'amount-5',
+      '100 euro' => 'amount-6',
       '250 euro' => 'amount-7',
 
       'private donation' => 'address-type-1',

@@ -78,11 +78,11 @@ Feature: Check the donation process on the frontend
     | option | value |
     | 5 euro | 5 |
     #| 15 euro | 15 |
-    #| 25 euro | 25 |
-    #| 75 euro | 75 |
-    #| 150 euro | 150 |
-    #| 200 euro | 200 |
-    #| 250 euro | 250 |
+    #| 25 euro | 25,00 |
+    #| 50 euro | 50,00 |
+    #| 75 euro | 75,00 |
+    #| 100 euro | 100,00 |
+    #| 250 euro | 250,00 |
 
 
   Scenario: Checks if the amount displayed is correct
