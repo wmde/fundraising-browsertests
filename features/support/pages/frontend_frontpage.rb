@@ -69,7 +69,7 @@ class FrontendFrontPage
     address_data['street'] = generate_random_string()
     address_data['post-code'] = generate_random_zipcode()
     address_data['city'] = generate_random_string()
-    address_data['email'] = generate_random_string() + "@" + generate_random_string() + "." + generate_random_string(3)
+    address_data['email'] = generate_random_string() + "@example.com"
 
     address_data
   end

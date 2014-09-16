@@ -4,6 +4,6 @@ Then(/^The credit card form shows$/) do
 end
 
 And(/^The cardholder should be the surname and name$/) do
-  name =  + @address_data['last-name'] + " " + @address_data['first-name']
+  name =  @address_data['first-name'] + " " + @address_data['last-name']
   expect(on(FrontendCreditPage).input_holder_element.value).to be == name
 end
