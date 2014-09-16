@@ -1,0 +1,23 @@
+# Copy this file to config.yml on your local system and set the values to your needs.
+# You can always set all of the below variables in your local environment by doing
+# set <VARIABLE>=<VALUE> (on Windows) or
+# export <VARIABLE>=<VALUE> (on Unix)
+# The environment variable will then be used instead of the values in here.
+
+# local configuration
+BACKEND_URL: "http://localhost/backend/"
+FRONTEND_URL: "http://localhost/frontend/"
+BACKEND_USERNAME: ""
+BACKEND_PASSWORD: ""
+
+# local browser configuration
+BROWSER: "firefox"
+
+HEADLESS: true
+
+# sauce browser configuration
+#SAUCE_ONDEMAND_USERNAME: "SaucelabsUser"
+#SAUCE_ONDEMAND_ACCESS_KEY: "SaucelabsKey"
+#BROWSER: "firefox"
+#VERSION: "25"
+#PLATFORM: "Linux"
