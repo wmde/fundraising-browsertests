@@ -18,7 +18,9 @@ class FrontendFrontPage
   text_field(:input_amount,  :id => 'amount-8')
 
   text_field(:input_iban, :id => 'iban')
-  text_field(:input_noniban, :id => 'account-number')
+  text_field(:input_bic, :id => 'bic')
+  text_field(:input_account_number, :id => 'account-number')
+  text_field(:input_bank_code, :id => 'bank-code')
 
   text_field(:input_company_name,  :id => 'company-name')
   text_field(:input_first_name,  :id => 'first-name')

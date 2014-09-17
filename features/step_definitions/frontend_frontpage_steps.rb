@@ -31,7 +31,7 @@ end
 
 Then(/^The NONIBAN details form (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
-  expect(on(FrontendFrontPage).input_noniban_element.visible?).to be value
+  expect(on(FrontendFrontPage).input_bank_code_element.visible?).to be value
 end
 
 
