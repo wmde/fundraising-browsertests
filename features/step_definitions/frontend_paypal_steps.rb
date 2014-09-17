@@ -29,3 +29,12 @@ Then(/^The donation sheet should appear$/) do
     end
   end
 end
+
+And(/^The (private|business) name on the receipt page should be the same$/) do | address_type |
+  if address_type == "private"
+    name =  @address_data['first-name'] + " " + @address_data['last-name']
+    expect(on(FrontendReceiptPage).span_confirm_name).to be == name
+  else
+    expect(on(FrontendReceiptPage).span_confirm_name).to be == @address_data['company-name']
+  end
+end

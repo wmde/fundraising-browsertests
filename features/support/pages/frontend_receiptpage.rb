@@ -18,6 +18,8 @@ class FrontendReceiptPage
   text_field(:input_city,  :id => 'city')
   text_field(:input_email,  :id => 'email')
 
+  span(:span_confirm_name,  :id => 'confirm-name')
+  span(:span_confirm_mail,  :id => 'confirm-mail')
 
   def get_donation_amount_element ()
     #TODO id in template

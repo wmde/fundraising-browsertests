@@ -28,10 +28,10 @@ Feature: Check the donation process on the frontend
 
   Examples:
     | donation_option | account_details_visibility |
-    | deposit donation | hides
-    | credit donation | hides
-    | debit donation | shows
-    | paypal donation | hides
+    | deposit donation | hides                     |
+    | credit donation | hides                      |
+    | debit donation | shows                       |
+    | paypal donation | hides                      |
 
 
   Scenario Outline: Checks if the IBAN details shows and hides
