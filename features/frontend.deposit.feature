@@ -45,7 +45,7 @@ Feature: Check the deposit process on the frontend
 
   Scenario: Checks if valid address data leads to a correct receipt
     When I select the private donation option
-    And I enter random valid address data
+    And I enter random valid private address data
     And I click on the done button
     And I wait a second
     And I click on the become member link

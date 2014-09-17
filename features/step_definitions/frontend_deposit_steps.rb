@@ -37,10 +37,6 @@ And(/^I erase the city data field$/) do
   on(FrontendFrontPage).input_city_element.clear
 end
 
-And(/^The given address data shows$/) do
-  pending
-end
-
 When(/^I click on the become member link$/) do
   on(FrontendReceiptPage).a_become_member.select
 end
