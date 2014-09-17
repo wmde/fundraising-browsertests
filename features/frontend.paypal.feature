@@ -14,7 +14,7 @@ Feature: Check the paypal process on the frontend
     And I wait a second
     Then The paypal form shows
 
-  Scenario Outline: Checks if the choosen value is displayed correctly
+  Scenario Outline: Checks if the chosen value is displayed correctly
     When I select the anonymous donation option
     And I wait a second
     And I select the <option> option
@@ -25,7 +25,7 @@ Feature: Check the paypal process on the frontend
 
   Examples:
     | option | value |
-    | 5 euro | 5,00 |
+    #| 5 euro | 5,00 |
     | 15 euro | 15,00 |
     #| 25 euro | 25,00 |
     #| 50 euro | 50,00 |
@@ -39,8 +39,9 @@ Feature: Check the paypal process on the frontend
     And I wait a second
     And I click on the done button
     And I wait a second
-    Then The paypal form shows
-    And The cardholder should be the surname and name
+    And I login with my paypal credentials
+    And I click on the paypal continue button
+    Then The donation sheet should appear
 
 
 

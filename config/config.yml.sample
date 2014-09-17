@@ -7,8 +7,13 @@
 # local configuration
 BACKEND_URL: "http://localhost/backend/"
 FRONTEND_URL: "http://localhost/frontend/"
+
 BACKEND_USERNAME: ""
 BACKEND_PASSWORD: ""
+
+# paypal only
+PAYPAL_USERNAME: ""
+PAYPAL_PASSWORD: ""
 
 # local browser configuration
 BROWSER: "firefox"
