@@ -21,6 +21,9 @@ class FrontendReceiptPage
   span(:span_confirm_name,  :id => 'confirm-name')
   span(:span_confirm_mail,  :id => 'confirm-mail')
 
+  span(:span_confirm_account,  :id => 'confirm-account-number')
+  span(:span_confirm_bic,  :id => 'confirm-bic')
+
   def get_donation_amount_element ()
     #TODO id in template
     @browser.element(xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
