@@ -27,6 +27,17 @@ And(/^The address details form shows$/) do
 end
 
 
+Then(/^The company field (shows|hides)$/) do | visibility |
+  value = visibility_to_boolean( visibility )
+  expect(on(FrontendFrontPage).input_company_name_element.visible?).to be value
+end
+
+Then(/^The first_name field (shows|hides)$/) do | visibility |
+  value = visibility_to_boolean( visibility )
+  expect(on(FrontendFrontPage).input_first_name_element.visible?).to be value
+end
+
+
 Then(/^The IBAN details form (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
   expect(on(FrontendFrontPage).input_iban_element.visible?).to be value
@@ -60,7 +71,7 @@ Then(/^The amount display should show (.*) Euro$/) do | amount |
   expect(on(FrontendFrontPage).get_donation_amount_element.text).to be == "#{amount}€"
 end
 
-When(/^I enter a random amount in the amount field$/) do
+When(/^I enter a valid random amount in the amount field$/) do
   @amount = generate_random_amount()
   on(FrontendFrontPage).input_amount = @amount
 end
@@ -68,20 +79,4 @@ end
 
 Then(/^The amount display should show the given amount$/) do
   expect(on(FrontendFrontPage).get_donation_amount_element.text).to be == "#{@amount}€"
-end
-
-Then(/^The company field shows$/) do
-  expect(on(FrontendFrontPage).input_company_name_element.visible?).to be true
-end
-
-Then(/^The company field hides$/) do
-  expect(on(FrontendFrontPage).input_company_name_element.visible?).to be false
-end
-
-Then(/^The first_name field shows$/) do
-  expect(on(FrontendFrontPage).input_first_name_element.visible?).to be true
-end
-
-Then(/^The first_name field hides$/) do
-  expect(on(FrontendFrontPage).input_first_name_element.visible?).to be false
 end

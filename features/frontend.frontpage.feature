@@ -1,7 +1,7 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer
 
-Feature: Check the donation process on the frontend
+Feature: Checks the frontpage ui on the frontend
 
   Background:
     Given I am on the fundraising frontpage
@@ -50,7 +50,7 @@ Feature: Check the donation process on the frontend
     | noiban | hides | shows |
 
 
-  Scenario Outline: Checks if the business data show
+  Scenario Outline: Checks if the business data shows and hides
     Given I select the debit donation option
     And I click on the continue button
     When I select the <donator_option> option
@@ -71,15 +71,15 @@ Feature: Check the donation process on the frontend
     Then The anonymous option hides
 
 
-  Scenario Outline: Checks if the amount displayed is correct
+  Scenario Outline: Checks if the selectable amount displayed is correct
     Given I click on the continue button
     When I select the <option> option
     Then The amount display should show <value> Euro
 
   Examples:
     | option | value |
-    | 5 euro | 5 |
-    #| 15 euro | 15 |
+    #| 5 euro | 5 |
+    | 15 euro | 15 |
     #| 25 euro | 25,00 |
     #| 50 euro | 50,00 |
     #| 75 euro | 75,00 |
@@ -89,5 +89,5 @@ Feature: Check the donation process on the frontend
 
   Scenario: Checks if the amount displayed is correct
     Given I click on the continue button
-    When I enter a random amount in the amount field
+    When I enter a valid random amount in the amount field
     Then The amount display should show the given amount
