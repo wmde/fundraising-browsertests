@@ -13,6 +13,8 @@ class FrontendReceiptPage
 
   link(:a_become_member, :id => 'become-member-button')
 
+  text_field(:input_company_name,  :id => 'company-name')
+
   text_field(:input_first_name,  :id => 'first-name')
   text_field(:input_last_name,  :id => 'last-name')
   text_field(:input_street,  :id => 'street')

@@ -9,7 +9,8 @@ Feature: Check the deposit process on the frontend
     And I click on the continue button
     And I wait a second
 
-  Scenario Outline: Checks if the chosen value is displayed correctly
+
+  Scenario Outline: Checks if deposit donation transfers the right amount
     When I select the anonymous donation option
     And I wait a second
     And I select the <option> option
@@ -28,12 +29,18 @@ Feature: Check the deposit process on the frontend
     #| 100 euro | 100,00 |
     #| 250 euro | 250,00 |
 
-  Scenario: Checks if valid address data leads to a correct receipt
-    When I select the private donation option
-    And I enter random valid private address data
+
+  Scenario Outline: Checks if valid address data leads to a correct receipt
+    When I select the <address_type> donation option
+    And I enter random valid <address_type> address data
     And I click on the done button
     And I wait a second
     And I click on the become member link
     And I wait a second
     Then The address details form shows
-    And The membership address data should be the same
+    And The <address_type> name on the become member from should be the same
+
+  Examples:
+  | address_type |
+  | private |
+  | business |
