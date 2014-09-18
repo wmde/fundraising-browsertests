@@ -1,3 +1,5 @@
+# @licence GNU GPL v2+
+# @author Christoph Fischer
 
 Then(/^The paypal form shows$/) do
   expect(on(FrontendPaypalPage).div_xpt_content_main_element.visible?).to be true

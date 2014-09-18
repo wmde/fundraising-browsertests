@@ -1,3 +1,5 @@
+# @licence GNU GPL v2+
+# @author Christoph Fischer
 
 class FrontendPaypalPage
   include PageObject

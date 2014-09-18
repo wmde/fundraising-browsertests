@@ -1,3 +1,5 @@
+# @licence GNU GPL v2+
+# @author Christoph Fischer
 
 Then(/^The credit card form shows$/) do
   expect(on(FrontendCreditPage).input_holder_element.visible?).to be true

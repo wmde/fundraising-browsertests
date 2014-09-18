@@ -1,3 +1,5 @@
+# @licence GNU GPL v2+
+# @author Christoph Fischer
 
 def generate_random_string(length=8)
   chars = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ"

@@ -1,5 +1,5 @@
-
-
+# @licence GNU GPL v2+
+# @author Christoph Fischer
 
 Then(/^The donation sheet shows$/) do
   expect(on(FrontendReceiptPage).div_donation_sheet_element.visible?).to be true

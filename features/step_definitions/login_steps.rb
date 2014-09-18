@@ -1,4 +1,5 @@
-
+# @licence GNU GPL v2+
+# @author Christoph Fischer
 
 When(/^User enters valid credentials$/) do
   on(LoginPage) do | page |

@@ -1,4 +1,5 @@
-
+# @licence GNU GPL v2+
+# @author Christoph Fischer
 
 Then(/^The debit form shows$/) do
   expect(on(FrontendDebitPage).get_donation_sepa_confirmation_element.exists?).to be true

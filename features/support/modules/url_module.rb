@@ -1,6 +1,3 @@
-# -*- encoding : utf-8 -*-
-# Wikidata UI tests
-#
 # Author:: Christoph Fischer (christoph.fischer@wikimedia.de)
 # License:: GNU GPL v2+
 #

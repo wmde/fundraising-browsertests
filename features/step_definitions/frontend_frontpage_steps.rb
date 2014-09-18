@@ -1,3 +1,6 @@
+# @licence GNU GPL v2+
+# @author Christoph Fischer
+
 Given(/^I am on the fundraising frontpage$/) do
   visit(FrontendFrontPage)
 end
