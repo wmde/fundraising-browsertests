@@ -72,22 +72,22 @@ Feature: Checks the frontpage ui on the frontend
 
 
   Scenario Outline: Checks if the selectable amount displayed is correct
-    Given I click on the continue button
     When I select the <option> option
+    And I click on the continue button
     Then The amount display should show <value> Euro
 
   Examples:
     | option | value |
-    #| 5 euro | 5 |
-    | 15 euro | 15 |
+    #| 5 euro | 5,00 |
+    | 15 euro | 15,00 |
     #| 25 euro | 25,00 |
     #| 50 euro | 50,00 |
     #| 75 euro | 75,00 |
     #| 100 euro | 100,00 |
-    #| 250 euro | 250,00 |
+    | 250 euro | 250,00 |
 
 
   Scenario: Checks if the amount displayed is correct
-    Given I click on the continue button
     When I enter a valid random amount in the amount field
+    And I click on the continue button
     Then The amount display should show the given amount

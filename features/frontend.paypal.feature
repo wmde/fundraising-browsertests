@@ -6,13 +6,14 @@ Feature: Check the paypal process on the frontend
   Background:
     Given I am on the fundraising frontpage
     And I select the paypal donation option
-    And I click on the continue button
-    And I wait a second
+
 
   Scenario Outline: Checks if the chosen value is displayed correctly
-    When I select the anonymous donation option
+    When I select the <option> option
+    And I click on the continue button
     And I wait a second
-    And I select the <option> option
+    And I select the anonymous donation option
+    And I wait a second
     And I click on the done button
     And I wait a second
     Then The paypal form shows
@@ -29,6 +30,8 @@ Feature: Check the paypal process on the frontend
     #| 250 euro | 250,00 |
 
   Scenario Outline: Check the non anonymous paypal donation
+    Given I click on the continue button
+    And I wait a second
     When I select the <address_type> donation option
     And I enter random valid <address_type> address data
     And I wait a second

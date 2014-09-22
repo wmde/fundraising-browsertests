@@ -78,5 +78,5 @@ end
 
 
 Then(/^The amount display should show the given amount$/) do
-  expect(on(FrontendFrontPage).get_donation_amount_element.text).to be == "#{@amount}€"
+  expect(on(FrontendFrontPage).get_donation_amount_element.text).to be == "#{@amount},00€"
 end

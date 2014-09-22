@@ -6,15 +6,15 @@ Feature: Check the debit process on the frontend
   Background:
     Given I am on the fundraising frontpage
     And I select the debit donation option
-    And I click on the continue button
-    And I wait a second
 
 
   Scenario Outline: Checks if debit donation transfers the transfers the right amount
-    When I select the noiban option
+    When I select the <option> option
+    And I click on the continue button
+    And I wait a second
+    And I select the noiban option
     And I wait a second
     And I enter valid account data
-    And I select the <option> option
     And I enter random valid private address data
     And I click on the done button
     And I wait a second
@@ -33,6 +33,8 @@ Feature: Check the debit process on the frontend
 
 
   Scenario Outline: Checks the debit donation without IBAN
+    Given I click on the continue button
+    And I wait a second
     When I select the noiban option
     And I select the <address_type> donation option
     And I wait a second
@@ -50,6 +52,8 @@ Feature: Check the debit process on the frontend
 
 
   Scenario Outline: Checks the debit donation with IBAN
+    Given I click on the continue button
+    And I wait a second
     When I select the iban option
     And I select the <address_type> donation option
     And I wait a second
@@ -67,7 +71,9 @@ Feature: Check the debit process on the frontend
 
 
   Scenario: Checks the debit donation approval
-    Given I select the iban option
+    Given I click on the continue button
+    And I wait a second
+    And I select the iban option
     And I enter valid iban account data
     And I enter random valid private address data
     And I click on the done button
