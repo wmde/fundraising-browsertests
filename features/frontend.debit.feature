@@ -57,7 +57,7 @@ Feature: Check the debit process on the frontend
     When I select the iban option
     And I select the <address_type> donation option
     And I wait a second
-    And I enter valid iban account data
+    And I enter a valid iban
     And I enter random valid <address_type> address data
     And I click on the done button
     And I wait a second
@@ -74,7 +74,7 @@ Feature: Check the debit process on the frontend
     Given I click on the continue button
     And I wait a second
     And I select the iban option
-    And I enter valid iban account data
+    And I enter a valid iban
     And I enter random valid private address data
     And I click on the done button
     And I wait a second

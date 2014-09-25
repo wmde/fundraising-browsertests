@@ -17,9 +17,9 @@ And(/^I enter valid account data$/) do
 end
 
 
-And(/^I enter valid iban account data$/) do
+And(/^I enter a valid iban$/) do
   on(FrontendFrontPage).input_iban = 'DE12500105170648489890'  ####Fake
-  on(FrontendFrontPage).input_bic = 'INGDDEFFXXX'
+  #on(FrontendFrontPage).input_bic = 'INGDDEFFXXX'
 end
 
 When(/^I confirm the debit contact$/) do
