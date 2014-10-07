@@ -5,6 +5,19 @@ This directory contains browser tests for the fundraising application.
 ## Prerequisites
 See prerequisites on [Browser Testing for Wikidata](https://www.mediawiki.org/wiki/Wikibase/Programmer%27s_guide_to_Wikibase#Browser_Testing_for_Wikidata).
 
+OR follow these steps (Linux):
+
+	\curl -L https://get.rvm.io | bash -s stable --ruby 
+	source /home/USERNAME/.rvm/scripts/rvm && rvm
+	
+	gem update --system
+	gem install bundler
+	bundle install
+	
+	git clone https://github.com/wmde/fundraising-browsertests.git
+	cd fundraising-browsertests
+	bundle install	
+
 ## Configuration
 
 PayPal Sandbox parameters in config.yml
