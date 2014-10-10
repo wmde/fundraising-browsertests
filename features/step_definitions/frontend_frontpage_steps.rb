@@ -1,5 +1,5 @@
 # @licence GNU GPL v2+
-# @author Christoph Fischer
+# @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Given(/^I am on the fundraising frontpage$/) do
   visit(FrontendFrontPage)

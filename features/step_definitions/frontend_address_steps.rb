@@ -1,3 +1,6 @@
+# @licence GNU GPL v2+
+# @author Christoph Fischer <christoph.fischer@wikimedia.de> <christoph.fischer@wikimedia.de>
+
 And(/^I enter random valid (private|business) address data$/) do | address_type |
   @address_data = on(FrontendFrontPage).get_random_address_data()
 
