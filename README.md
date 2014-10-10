@@ -1,6 +1,6 @@
 FundraisingBrowserTests
 ====================
-This directory contains browser tests for the fundraising application.
+This directory contains browser tests for the spenden.wikimedia.de fundraising application.
 
 ## Prerequisites
 See prerequisites on [Browser Testing for Wikidata](https://www.mediawiki.org/wiki/Wikibase/Programmer%27s_guide_to_Wikibase#Browser_Testing_for_Wikidata).
@@ -24,8 +24,7 @@ PayPal Sandbox parameters in config.yml
 	PAYPAL_USERNAME: ""
 	PAYPAL_PASSWORD: ""
 
-Frontend / Backend URL
-	BACKEND_URL: "http://localhost/backend/"
+Frontend URL
 	FRONTEND_URL: "http://localhost/frontend"
 
 ## Executing tests
