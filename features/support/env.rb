@@ -12,5 +12,5 @@ config.each do |k, v|
 end
 
 require_all "features/support/utils"
-require_all "features/support/modules"
+#require_all "features/support/modules"
 require_all "features/support/pages"
