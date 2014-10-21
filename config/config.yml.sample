@@ -7,9 +7,6 @@
 # local configuration
 FRONTEND_URL: "http://localhost/frontend/"
 
-BACKEND_USERNAME: ""
-BACKEND_PASSWORD: ""
-
 # paypal only
 PAYPAL_USERNAME: ""
 PAYPAL_PASSWORD: ""
@@ -17,9 +14,8 @@ PAYPAL_PASSWORD: ""
 # local browser configuration
 BROWSER: "firefox"
 
-HEADLESS: true
-
 # sauce browser configuration
+# uncomment to run on saucelabs
 #SAUCE_ONDEMAND_USERNAME: "SaucelabsUser"
 #SAUCE_ONDEMAND_ACCESS_KEY: "SaucelabsKey"
 #BROWSER: "firefox"
