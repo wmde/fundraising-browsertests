@@ -10,7 +10,7 @@ class FrontendDebitReceiptPage
   checkbox(:checkbox_confirm_shortterm,  :id => 'confirm_shortterm')
 
   def get_label_element_to_radio ( radio_id )
-    @browser.element(xpath: "//input[@id = \'#{radio_id}\']/following::label[1]")
+    @browser.element(xpath: compose_label_xpath_for_radio( radio_id ))
   end
 
 end

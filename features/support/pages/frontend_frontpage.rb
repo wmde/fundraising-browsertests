@@ -57,12 +57,12 @@ class FrontendFrontPage
       'anonymous donation' => 'address-type-3'
   }
 
-  def get_label_element_to_radio ( radio_id )
-    @browser.element(xpath: "//input[@id = \'#{radio_id}\']/following::label[1]")
-  end
+	def get_label_element_to_radio ( radio_id )
+		@browser.element(xpath: compose_label_xpath_for_radio( radio_id ))
+	end
 
   def get_lable_element_from_map ( radio_name )
-    @browser.element(xpath: "//input[@id = \'#{@@radio_button_map[radio_name]}\']/following::label[1]")
+		get_label_element_to_radio( @@radio_button_map[radio_name] )
   end
 
   def get_random_address_data ()
