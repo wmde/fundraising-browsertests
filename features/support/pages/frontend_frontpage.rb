@@ -3,6 +3,7 @@
 
 class FrontendFrontPage
   include PageObject
+	include FrontendAddressForm
 
   page_url ENV["FRONTEND_URL"]
 
@@ -23,14 +24,6 @@ class FrontendFrontPage
   text_field(:input_bic, :id => 'bic')
   text_field(:input_account_number, :id => 'account-number')
   text_field(:input_bank_code, :id => 'bank-code')
-
-  text_field(:input_company_name,  :id => 'company-name')
-  text_field(:input_first_name,  :id => 'first-name')
-  text_field(:input_last_name,  :id => 'last-name')
-  text_field(:input_street,  :id => 'street')
-  text_field(:input_post_code,  :id => 'post-code')
-  text_field(:input_city,  :id => 'city')
-  text_field(:input_email,  :id => 'email')
 
   @@radio_button_map = {
       'deposit donation' => 'payment-type-1',

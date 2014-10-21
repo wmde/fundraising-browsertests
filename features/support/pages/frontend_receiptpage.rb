@@ -3,6 +3,7 @@
 
 class FrontendReceiptPage
   include PageObject
+	include FrontendAddressForm
 
   #page_url "#{ENV["FRONTEND_URL"]}"
 
@@ -12,15 +13,6 @@ class FrontendReceiptPage
   div(:div_personal_data_sheet, :id => 'personal-data')
 
   link(:a_become_member, :id => 'become-member-button')
-
-  text_field(:input_company_name,  :id => 'company-name')
-
-  text_field(:input_first_name,  :id => 'first-name')
-  text_field(:input_last_name,  :id => 'last-name')
-  text_field(:input_street,  :id => 'street')
-  text_field(:input_post_code,  :id => 'post-code')
-  text_field(:input_city,  :id => 'city')
-  text_field(:input_email,  :id => 'email')
 
   span(:span_confirm_name,  :id => 'confirm-name')
   span(:span_confirm_mail,  :id => 'confirm-mail')

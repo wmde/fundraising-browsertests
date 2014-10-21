@@ -4,8 +4,6 @@
 class FrontendDebitReceiptPage
   include PageObject
 
-  #page_url "#{ENV["FRONTEND_URL"]}"
-
   checkbox(:checkbox_confirm_sepa,  :id => 'confirm_sepa')
   checkbox(:checkbox_confirm_shortterm,  :id => 'confirm_shortterm')
 
