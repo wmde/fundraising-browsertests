@@ -5,8 +5,6 @@ class FrontendReceiptPage
   include PageObject
 	include FrontendAddressForm
 
-  #page_url "#{ENV["FRONTEND_URL"]}"
-
   #TODO id in template
   paragraph(:div_donation_sheet, :xpath => '//*[@id=\'donation-sheet\']/descendant::p[1]')
 
