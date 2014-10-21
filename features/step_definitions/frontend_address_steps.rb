@@ -20,3 +20,31 @@ end
 Then(/^Address from should be visible$/) do
   expect(on(FrontendFrontPage).input_city_element.visible?).to be true
 end
+
+And(/^I erase the city data field$/) do
+	on(FrontendFrontPage).input_city_element.clear
+end
+
+And(/^I erase the street data field$/) do
+	on(FrontendFrontPage).input_street_element.clear
+end
+
+And(/^I erase the first name data field$/) do
+	on(FrontendFrontPage).input_first_name_element.clear
+end
+
+And(/^I erase the email data field$/) do
+	on(FrontendFrontPage).input_email_element.clear
+end
+
+And(/^I enter an invalid email/) do
+	on(FrontendFrontPage).input_email = 'test@reallynotavaliddomainforsuretobesure.complicated'
+end
+
+And(/^I erase the postcode data field$/) do
+	on(FrontendFrontPage).input_post_code_element.clear
+end
+
+And(/^I enter an invalid postcode$/) do
+	on(FrontendFrontPage).input_post_code = '2345'
+end
