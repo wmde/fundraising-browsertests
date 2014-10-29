@@ -1,7 +1,7 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer <christoph.fischer@wikimedia.de> <christoph.fischer@wikimedia.de>
 
-Feature: Check the comment function on the frontend
+Feature: Check the info checkbox on the frontend
 
   Background:
     Given I am on the fundraising frontpage
