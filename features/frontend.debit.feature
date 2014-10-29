@@ -31,7 +31,7 @@ Feature: Check the debit process on the frontend
     #| 100 euro | 100,00 |
     #| 250 euro | 250,00 |
 
-
+  @no_iban
   Scenario Outline: Checks the debit donation without IBAN
     Given I click on the continue button
     And I wait a second
