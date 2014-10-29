@@ -37,12 +37,9 @@ Feature: Check the deposit process on the frontend
     And I enter random valid <address_type> address data
     And I click on the done button
     And I wait a second
-    And I click on the become member link
-    And I wait a second
-    Then The address details form shows
-    And The <address_type> name on the become member from should be the same
+    Then The donation sheet shows
 
   Examples:
-  | address_type |
-  | private |
-  | business |
+    | address_type |
+    | private |
+    | business |
