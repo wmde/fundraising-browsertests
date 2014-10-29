@@ -14,11 +14,19 @@ class FrontendReceiptPage
 
   link(:a_become_member, :id => 'become-member-button')
 
+	radio(:radio_amount1, :id => 'amount-1')
+	radio(:radio_amount2, :id => 'amount-1')
+	radio(:radio_amount3, :id => 'amount-1')
+
   span(:span_confirm_name,  :id => 'confirm-name')
   span(:span_confirm_mail,  :id => 'confirm-mail')
 
   span(:span_confirm_account,  :id => 'confirm-account-number')
   span(:span_confirm_bic,  :id => 'confirm-bic')
+
+	def get_element_by_id ( id )
+		@browser.element( id: id )
+	end
 
   def get_donation_amount_element ()
     #TODO id in template

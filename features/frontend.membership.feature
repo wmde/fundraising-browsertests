@@ -19,8 +19,10 @@ Feature: Check the functions of the membership from
     And I wait a second
     Then The address details form shows
     And The <address_type> membership address data should be the same
+    And I wait a second
+    And The lower fee rates should be <lower_fee>
 
   Examples:
-    | address_type |
-    | private |
-    | business |
+    | address_type | lower_fee |
+    | private | available |
+    | business | unavailable |

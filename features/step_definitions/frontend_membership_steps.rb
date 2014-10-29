@@ -14,3 +14,13 @@ Then(/^The (private|business) membership address data should be the same$/) do |
 	expect(on(FrontendReceiptPage).input_city_element.value).to be == @address_data['city']
 	expect(on(FrontendReceiptPage).input_email_element.value).to be == @address_data['email']
 end
+
+And(/^The lower fee rates should be (available|unavailable)$/) do | lower_fee |
+	is_disabled = 'true'
+	if( lower_fee == 'available')
+		is_disabled = nil
+	end
+	expect(on(FrontendReceiptPage).radio_amount1_element.attribute('disabled')).equal? is_disabled
+	expect(on(FrontendReceiptPage).radio_amount2_element.attribute('disabled')).equal? is_disabled
+	expect(on(FrontendReceiptPage).radio_amount3_element.attribute('disabled')).equal? is_disabled
+end
