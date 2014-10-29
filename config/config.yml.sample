@@ -18,6 +18,8 @@ BROWSER: "firefox"
 # uncomment to run on saucelabs
 #SAUCE_ONDEMAND_USERNAME: "SaucelabsUser"
 #SAUCE_ONDEMAND_ACCESS_KEY: "SaucelabsKey"
+
+# additional parameters https://saucelabs.com/platforms/webdriver
 #BROWSER: "firefox"
 #VERSION: "25"
 #PLATFORM: "Linux"
