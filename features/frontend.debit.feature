@@ -51,13 +51,13 @@ Feature: Check the debit process on the frontend
     | business |
 
 
-  Scenario Outline: Checks the debit donation with IBAN
+  Scenario Outline: Checks the debit donation with german IBAN
     Given I click on the continue button
     And I wait a second
     When I select the iban option
     And I select the <address_type> donation option
     And I wait a second
-    And I enter a valid iban
+    And I enter a valid german iban
     And I enter random valid <address_type> address data
     And I click on the done button
     And I wait a second
@@ -69,12 +69,24 @@ Feature: Check the debit process on the frontend
     | private |
     | business |
 
+  Scenario: Checks the debit donation with non german IBAN
+    Given I click on the continue button
+    And I wait a second
+    When I select the iban option
+    And I select the private donation option
+    And I wait a second
+    And I enter a valid iban and bic
+    And I enter random valid private address data
+    And I click on the done button
+    And I wait a second
+    Then The debit form shows
+    And The private name on the receipt page should be the same
 
   Scenario: Checks the debit donation approval
     Given I click on the continue button
     And I wait a second
     And I select the iban option
-    And I enter a valid iban
+    And I enter a valid german iban
     And I enter random valid private address data
     And I click on the done button
     And I wait a second
