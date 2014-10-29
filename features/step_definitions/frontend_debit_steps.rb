@@ -21,7 +21,7 @@ And(/^I enter a valid german iban$/) do
   on(FrontendFrontPage).input_iban = 'DE12500105170648489890'  ####Fake
 end
 
-#http://www.unfcu.org/WorkArea/DownloadAsset.aspx?id=1056
+#Example data see http://www.unfcu.org/WorkArea/DownloadAsset.aspx?id=1056
 And(/^I enter a valid iban and bic$/) do
 	on(FrontendFrontPage).input_iban = 'BE68539007547034'  ####Fake
 	on(FrontendFrontPage).input_bic = 'CITIBEBXXXX'
