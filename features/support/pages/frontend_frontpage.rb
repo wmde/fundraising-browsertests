@@ -47,7 +47,9 @@ class FrontendFrontPage
 
       'private donation' => 'address-type-1',
       'business donation' => 'address-type-2',
-      'anonymous donation' => 'address-type-3'
+      'anonymous donation' => 'address-type-3',
+
+			'send information' => 'send-information'
   }
 
 	def get_label_element_to_radio ( radio_id )

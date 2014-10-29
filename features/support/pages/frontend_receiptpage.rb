@@ -10,6 +10,8 @@ class FrontendReceiptPage
 
   div(:div_personal_data_sheet, :id => 'personal-data')
 
+	div(:div_send_info, :id => 'send-info')
+
   link(:a_become_member, :id => 'become-member-button')
 
   span(:span_confirm_name,  :id => 'confirm-name')

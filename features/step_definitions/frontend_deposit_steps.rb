@@ -2,7 +2,11 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de> <christoph.fischer@wikimedia.de>
 
 Then(/^The donation sheet shows$/) do
-  expect(on(FrontendReceiptPage).div_donation_sheet_element.visible?).to be true
+	on(FrontendReceiptPage) do | page |
+		page.wait_until do
+			page.div_donation_sheet_element.visible?
+		end
+	end
 end
 
 And(/^The donation amount should show (.*) Euro$/) do | amount |

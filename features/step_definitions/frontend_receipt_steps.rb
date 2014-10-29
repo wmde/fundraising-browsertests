@@ -25,3 +25,7 @@ And(/^The (private|business) name on the become member from should be the same$/
     expect(on(FrontendReceiptPage).input_company_name_element.value).to be == @address_data['company-name']
   end
 end
+
+And(/^The send information text shows$/) do
+	expect(on(FrontendReceiptPage).div_send_info_element.visible?).to be true
+end
