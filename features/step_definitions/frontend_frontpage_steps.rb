@@ -76,7 +76,7 @@ Then(/^The amount display should show (.*) Euro$/) do | amount |
 end
 
 When(/^I enter a valid random amount in the amount field$/) do
-  @amount = generate_random_amount()
+  @amount = generate_random_amount
   on(FrontendFrontPage).input_amount = @amount
 end
 
