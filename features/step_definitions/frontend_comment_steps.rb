@@ -10,7 +10,7 @@ And(/^I finished a private debit donation with iban$/) do
 	step 'I enter random valid private address data'
 	step 'I click on the done button'
 	step 'I wait a second'
-	step 'I confirm the debit contact'
+	step 'I confirm the debit contract'
 	step 'I confirm the notification contract'
 	step 'I click on the done button'
 	step 'I wait a second'

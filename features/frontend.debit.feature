@@ -90,7 +90,7 @@ Feature: Check the debit process on the frontend
     And I enter random valid private address data
     And I click on the done button
     And I wait a second
-    When I confirm the debit contact
+    When I confirm the debit contract
     And I confirm the notification contract
     And I click on the done button
     Then The debit receipt shows

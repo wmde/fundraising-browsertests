@@ -27,7 +27,7 @@ And(/^I enter a valid iban and bic$/) do
 	on(FrontendFrontPage).input_bic = 'CITIBEBXXXX'
 end
 
-When(/^I confirm the debit contact$/) do
+When(/^I confirm the debit contract$/) do
   on(FrontendDebitReceiptPage).get_label_element_to_radio('confirm_sepa').click
 end
 
