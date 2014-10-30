@@ -13,6 +13,7 @@ class FrontendReceiptPage
 	div(:div_send_info, :id => 'send-info')
 
   link(:a_become_member, :id => 'become-member-button')
+  button(:button_done_member, :id => 'memFormSubmit')
 
 	radio(:radio_amount1, :id => 'amount-1')
 	radio(:radio_amount2, :id => 'amount-1')

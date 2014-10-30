@@ -36,3 +36,7 @@ And(/^The lower fee rates should be (available|unavailable)$/) do | lower_fee |
 	expect(on(FrontendReceiptPage).radio_amount2_element.attribute('disabled')).equal? is_disabled
 	expect(on(FrontendReceiptPage).radio_amount3_element.attribute('disabled')).equal? is_disabled
 end
+
+And(/^I click on the done member button$/) do
+	on(FrontendReceiptPage).button_done_member_element.click
+end

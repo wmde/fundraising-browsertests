@@ -4,12 +4,13 @@
 Feature: Check the functions of the membership from
 
   Background:
+
+
+  Scenario Outline: Checks if valid address data is transmitted to the member form
     Given I am on the fundraising frontpage
     And I select the deposit donation option
     And I click on the continue button
     And I wait a second
-
-  Scenario Outline: Checks if valid address data is transmitted to the member form
     When I select the <address_type> donation option
     And I enter random valid <address_type> address data
     And I click on the done button
@@ -23,4 +24,20 @@ Feature: Check the functions of the membership from
     | address_type | lower_fee |
     | private | available |
     | business | unavailable |
+
+  Scenario Outline: Checks the debit donation with different membership fees
+    Given I finished a private debit donation with iban
+    And I click on the become member link
+    And The address details form shows
+    And I select the <fee_option> option
+    When I click on the done member button
+    Then The debit confirmation form shows
+
+  Examples:
+    | fee_option |
+    | 24 euro fee |
+    | 50 euro fee |
+    | 75 euro fee |
+    | 100 euro fee |
+    | 150 euro fee |
 
