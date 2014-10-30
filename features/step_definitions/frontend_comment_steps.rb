@@ -1,5 +1,5 @@
 # @licence GNU GPL v2+
-# @author Christoph Fischer <christoph.fischer@wikimedia.de> <christoph.fischer@wikimedia.de>
+# @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 And(/^I finished a (private|business) debit donation with iban$/) do | address_type |
 	step 'I am on the fundraising frontpage'

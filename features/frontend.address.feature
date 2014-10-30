@@ -1,5 +1,5 @@
 # @licence GNU GPL v2+
-# @author Christoph Fischer <christoph.fischer@wikimedia.de> <christoph.fischer@wikimedia.de>
+# @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Feature: Check the address validation on the frontend
 

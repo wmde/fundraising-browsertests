@@ -1,5 +1,5 @@
 # @licence GNU GPL v2+
-# @author Christoph Fischer <christoph.fischer@wikimedia.de> <christoph.fischer@wikimedia.de>
+# @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 And(/^The donation amount should show (.*) Euro$/) do | amount |
   expect(on(FrontendReceiptPage).get_donation_amount_element.text).to be == "#{amount}€"
