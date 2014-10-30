@@ -43,7 +43,7 @@ Feature: Check the debit process on the frontend
     And I click on the done button
     And I wait a second
     Then The debit confirmation form shows
-    And The <address_type> name on the receipt page should be the same
+    And The <address_type> data on the receipt page should be the same
 
   Examples:
     | address_type |
@@ -62,7 +62,7 @@ Feature: Check the debit process on the frontend
     And I click on the done button
     And I wait a second
     Then The debit confirmation form shows
-    And The <address_type> name on the receipt page should be the same
+    And The <address_type> data on the receipt page should be the same
 
   Examples:
     | address_type |
@@ -80,7 +80,7 @@ Feature: Check the debit process on the frontend
     And I click on the done button
     And I wait a second
     Then The debit confirmation form shows
-    And The private name on the receipt page should be the same
+    And The private data on the receipt page should be the same
 
   Scenario: Checks the debit donation approval
     Given I click on the continue button
