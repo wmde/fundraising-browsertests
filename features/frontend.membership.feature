@@ -14,7 +14,7 @@ Feature: Check the functions of the membership from
     When I select the <address_type> donation option
     And I enter random valid <address_type> address data
     And I click on the done button
-    Then The donation sheet shows
+    Then The deposit donation confirmation shows
     And I click on the become member link
     Then The address details form shows
     And The <address_type> membership address data should be the same
@@ -35,7 +35,6 @@ Feature: Check the functions of the membership from
     And I confirm the debit contract
     And I click on the done button
     Then The membership confirmation shows
-
 
   Examples:
     | fee_option |

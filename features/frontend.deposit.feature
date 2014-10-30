@@ -15,8 +15,7 @@ Feature: Check the deposit process on the frontend
     And I select the anonymous donation option
     And I wait a second
     And I click on the done button
-    And I wait a second
-    Then The donation sheet shows
+    Then The deposit donation confirmation shows
     And The donation amount should show <value> Euro
 
   Examples:
@@ -36,8 +35,7 @@ Feature: Check the deposit process on the frontend
     When I select the <address_type> donation option
     And I enter random valid <address_type> address data
     And I click on the done button
-    And I wait a second
-    Then The donation sheet shows
+    Then The deposit donation confirmation shows
 
   Examples:
     | address_type |

@@ -24,12 +24,12 @@ And(/^I click on the paypal continue button$/) do
   on(FrontendPaypalPage).button_continue_element.click
 end
 
-Then(/^The donation sheet should appear$/) do
-  on(FrontendReceiptPage) do | page |
-    page.wait_until do
-      page.div_donation_sheet_element.visible?
-    end
-  end
+Then(/^The normal donation confirmation shows$/) do
+	on(FrontendReceiptPage) do | page |
+		page.wait_until do
+			page.div_normal_confirmation.visible?
+		end
+	end
 end
 
 And(/^The (private|business) name on the receipt page should be the same$/) do | address_type |

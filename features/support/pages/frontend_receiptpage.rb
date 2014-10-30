@@ -5,9 +5,6 @@ class FrontendReceiptPage
   include PageObject
 	include FrontendAddressForm
 
-  #TODO id in template
-  paragraph(:div_donation_sheet, :xpath => '//*[@id=\'donation-sheet\']/descendant::p[1]')
-
   div(:div_personal_data_sheet, :id => 'personal-data')
 
 	div(:div_debit_confirmation, :id => 'debit-donation-confirmation')
