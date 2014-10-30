@@ -1,7 +1,7 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer <christoph.fischer@wikimedia.de> <christoph.fischer@wikimedia.de>
 
-Then(/^The debit form shows$/) do
+Then(/^The debit confirmation form shows$/) do
   expect(on(FrontendDebitPage).get_donation_sepa_confirmation_element.exists?).to be true
 end
 

@@ -18,7 +18,7 @@ Feature: Check the debit process on the frontend
     And I enter random valid private address data
     And I click on the done button
     And I wait a second
-    Then The debit form shows
+    Then The debit confirmation form shows
     And The debit donation amount should show <value> Euro
 
   Examples:
@@ -42,7 +42,7 @@ Feature: Check the debit process on the frontend
     And I enter random valid <address_type> address data
     And I click on the done button
     And I wait a second
-    Then The debit form shows
+    Then The debit confirmation form shows
     And The <address_type> name on the receipt page should be the same
 
   Examples:
@@ -61,7 +61,7 @@ Feature: Check the debit process on the frontend
     And I enter random valid <address_type> address data
     And I click on the done button
     And I wait a second
-    Then The debit form shows
+    Then The debit confirmation form shows
     And The <address_type> name on the receipt page should be the same
 
   Examples:
@@ -79,7 +79,7 @@ Feature: Check the debit process on the frontend
     And I enter random valid private address data
     And I click on the done button
     And I wait a second
-    Then The debit form shows
+    Then The debit confirmation form shows
     And The private name on the receipt page should be the same
 
   Scenario: Checks the debit donation approval
