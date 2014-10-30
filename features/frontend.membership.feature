@@ -35,6 +35,7 @@ Feature: Check the functions of the membership from
     And I confirm the debit contract
     And I click on the done button
     Then The membership confirmation shows
+    And The private data on the receipt page should be the same
 
   Examples:
     | fee_option |
