@@ -4,6 +4,7 @@
 class FrontendFrontPage
   include PageObject
 	include FrontendAddressForm
+	include FrontendRadioMap
 
   page_url ENV["FRONTEND_URL"]
 
@@ -24,41 +25,6 @@ class FrontendFrontPage
   text_field(:input_bic, :id => 'bic')
   text_field(:input_account_number, :id => 'account-number')
   text_field(:input_bank_code, :id => 'bank-code')
-
-  @@radio_button_map = {
-      'deposit donation' => 'payment-type-1',
-      'credit donation' => 'payment-type-2',
-      'debit donation' => 'payment-type-3',
-      'paypal donation' => 'payment-type-4',
-
-      'single donation' => 'periode-1',
-      'regularly donation' => 'periode-2',
-
-      'iban' => 'debit-type-1',
-      'noiban' => 'debit-type-2',
-
-      '5 euro' => 'amount-1',
-      '15 euro' => 'amount-2',
-      '25 euro' => 'amount-3',
-      '50 euro' => 'amount-4',
-      '75 euro' => 'amount-5',
-      '100 euro' => 'amount-6',
-      '250 euro' => 'amount-7',
-
-      'private donation' => 'address-type-1',
-      'business donation' => 'address-type-2',
-      'anonymous donation' => 'address-type-3',
-
-			'send information' => 'send-information'
-  }
-
-	def get_label_element_to_radio ( radio_id )
-		@browser.element(xpath: compose_label_xpath_for_radio( radio_id ))
-	end
-
-  def get_lable_element_from_map ( radio_name )
-		get_label_element_to_radio( @@radio_button_map[radio_name] )
-  end
 
   def get_random_address_data ()
     address_data = Hash.new
