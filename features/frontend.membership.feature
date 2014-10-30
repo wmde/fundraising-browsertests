@@ -13,16 +13,14 @@ Feature: Check the functions of the membership from
     When I select the <address_type> donation option
     And I enter random valid <address_type> address data
     And I click on the done button
-    And I wait a second
     Then The donation sheet shows
     And I click on the become member link
-    And I wait a second
     Then The address details form shows
     And The <address_type> membership address data should be the same
-    And I wait a second
     And The lower fee rates should be <lower_fee>
 
   Examples:
     | address_type | lower_fee |
     | private | available |
     | business | unavailable |
+

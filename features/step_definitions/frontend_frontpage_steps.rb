@@ -23,7 +23,11 @@ end
 
 
 And(/^The address details form shows$/) do
-  expect(on(FrontendFrontPage).label_private_element.visible?).to be true
+	on(FrontendFrontPage) do | page |
+		page.wait_until do
+			page.label_private_element.visible?
+		end
+	end
 end
 
 
