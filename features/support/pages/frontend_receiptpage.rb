@@ -10,6 +10,10 @@ class FrontendReceiptPage
 
   div(:div_personal_data_sheet, :id => 'personal-data')
 
+	div(:div_debit_confirmation, :id => 'debit-donation-confirmation')
+	div(:div_normal_confirmation, :id => 'normal-donation-confirmation')
+	div(:div_deposit_confirmation, :id => 'deposit-donation-confirmation')
+
 	div(:div_send_info, :id => 'send-info')
 
   link(:a_become_member, :id => 'become-member-button')
