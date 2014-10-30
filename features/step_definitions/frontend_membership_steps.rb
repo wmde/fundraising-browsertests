@@ -40,3 +40,11 @@ end
 And(/^I click on the done member button$/) do
 	on(FrontendReceiptPage).button_done_member_element.click
 end
+
+Then(/^The membership confirmation shows$/) do
+	on(FrontendReceiptPage) do | page |
+		page.wait_until do
+			page.div_membership_confirmation_element.visible?
+		end
+	end
+end

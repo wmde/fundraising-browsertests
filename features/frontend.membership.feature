@@ -31,13 +31,17 @@ Feature: Check the functions of the membership from
     And The address details form shows
     And I select the <fee_option> option
     When I click on the done member button
-    Then The debit confirmation form shows
+    And The debit confirmation form shows
+    And I confirm the debit contract
+    And I click on the done button
+    Then The membership confirmation shows
+
 
   Examples:
     | fee_option |
-    | 24 euro fee |
-    | 50 euro fee |
+#    | 24 euro fee |
+#    | 50 euro fee |
     | 75 euro fee |
-    | 100 euro fee |
-    | 150 euro fee |
+#    | 100 euro fee |
+#    | 150 euro fee |
 

@@ -13,6 +13,7 @@ class FrontendReceiptPage
 	div(:div_debit_confirmation, :id => 'debit-donation-confirmation')
 	div(:div_normal_confirmation, :id => 'normal-donation-confirmation')
 	div(:div_deposit_confirmation, :id => 'deposit-donation-confirmation')
+	div(:div_membership_confirmation, :id => 'sepa-membership-confirmation')
 
 	div(:div_send_info, :id => 'send-info')
 
