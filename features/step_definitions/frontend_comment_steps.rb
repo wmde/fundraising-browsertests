@@ -1,13 +1,14 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer <christoph.fischer@wikimedia.de> <christoph.fischer@wikimedia.de>
 
-And(/^I finished a private debit donation with iban$/) do
+And(/^I finished a (private|business) debit donation with iban$/) do | address_type |
 	step 'I am on the fundraising frontpage'
 	step 'I select the debit donation option'
 	step 'I click on the continue button'
 	step 'I wait a second'
 	step 'I enter a valid german iban'
-	step 'I enter random valid private address data'
+	step "I select the #{address_type} donation option"
+	step "I enter random valid #{address_type} address data"
 	step 'I click on the done button'
 	step 'I wait a second'
 	step 'I confirm the debit contract'
