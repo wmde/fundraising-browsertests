@@ -22,6 +22,9 @@ class FrontendReceiptPage
 	radio(:radio_amount3, :id => 'amount-1')
 
   span(:span_confirm_name,  :id => 'confirm-name')
+  span(:span_confirm_street,  :id => 'confirm-street')
+  span(:span_confirm_post_code,  :id => 'confirm-postcode')
+  span(:span_confirm_city,  :id => 'confirm-city')
   span(:span_confirm_mail,  :id => 'confirm-mail')
 
   span(:span_confirm_account,  :id => 'confirm-account-number')

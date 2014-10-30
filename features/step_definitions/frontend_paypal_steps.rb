@@ -27,16 +27,11 @@ end
 Then(/^The normal donation confirmation shows$/) do
 	on(FrontendReceiptPage) do | page |
 		page.wait_until do
-			page.div_normal_confirmation.visible?
+			page.div_normal_confirmation_element.visible?
 		end
 	end
 end
 
-And(/^The (private|business) name on the receipt page should be the same$/) do | address_type |
-  if address_type == "private"
-    name =  @address_data['first-name'] + " " + @address_data['last-name']
-    expect(on(FrontendReceiptPage).span_confirm_name).to be == name
-  else
-    expect(on(FrontendReceiptPage).span_confirm_name).to be == @address_data['company-name']
-  end
+And(/^I click on the paypal back button$/) do
+	on(FrontendPaypalPage).a_back_to_frontend_element.click
 end

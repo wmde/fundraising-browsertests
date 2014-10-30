@@ -39,12 +39,13 @@ Feature: Check the paypal process on the frontend
     And I wait a second
     And I login with my paypal credentials
     And I click on the paypal continue button
-    Then The donation sheet should appear
-    And The <address_type> name on the receipt page should be the same
+    And I click on the paypal back button
+    Then The normal donation confirmation shows
+    And The <address_type> data on the receipt page should be the same
 
   Examples:
-  | address_type |
-  | private |
-  | business |
+    | address_type |
+    | private |
+    #| business |
 
 
