@@ -17,7 +17,7 @@ And(/^I finished a debit donation$/) do
 end
 
 Given(/^I click on the add comment link$/) do
-	on(FrontendCommentPage).a_view_comments_element.click()
+	on(FrontendCommentPage).a_view_comments_element.click
 end
 
 And(/^I enter a harmless comment text$/) do
@@ -25,7 +25,7 @@ And(/^I enter a harmless comment text$/) do
 end
 
 And(/^I click the submit comment button$/) do
-	on(FrontendCommentPage).button_publish_element.click()
+	on(FrontendCommentPage).button_publish_element.click
 end
 
 Then(/^a positive feedback should show$/) do
