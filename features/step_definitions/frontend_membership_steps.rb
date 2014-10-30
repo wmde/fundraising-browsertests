@@ -48,3 +48,15 @@ Then(/^The membership confirmation shows$/) do
 		end
 	end
 end
+
+And(/^I enter (\d+) euro in the amount field$/) do | arg |
+	on(FrontendReceiptPage).input_amount = arg
+end
+
+Then(/^The error box shows$/) do
+	on(FrontendReceiptPage) do | page |
+		page.wait_until do
+			page.div_error_box_element.visible?
+		end
+	end
+end

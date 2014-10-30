@@ -5,7 +5,6 @@ Feature: Check the functions of the membership from
 
   Background:
 
-
   Scenario Outline: Checks if valid address data is transmitted to the member form
     Given I am on the fundraising frontpage
     And I select the deposit donation option
@@ -44,4 +43,14 @@ Feature: Check the functions of the membership from
     | 75 euro fee |
 #    | 100 euro fee |
 #    | 150 euro fee |
+
+  Scenario: Checks if to low membership fees lead to an error
+    Given I finished a business debit donation with iban
+    And I click on the become member link
+    And The address details form shows
+    And I enter 10 euro in the amount field
+    When I click on the done member button
+    Then The error box shows
+
+
 

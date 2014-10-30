@@ -18,8 +18,10 @@ class FrontendReceiptPage
   button(:button_done_member, :id => 'memFormSubmit')
 
 	radio(:radio_amount1, :id => 'amount-1')
-	radio(:radio_amount2, :id => 'amount-1')
-	radio(:radio_amount3, :id => 'amount-1')
+	radio(:radio_amount2, :id => 'amount-2')
+	radio(:radio_amount3, :id => 'amount-3')
+
+	text_field(:input_amount,  :id => 'amount-6')
 
   span(:span_confirm_name,  :id => 'confirm-name')
   span(:span_confirm_street,  :id => 'confirm-street')
@@ -29,6 +31,8 @@ class FrontendReceiptPage
 
   span(:span_confirm_account,  :id => 'confirm-account-number')
   span(:span_confirm_bic,  :id => 'confirm-bic')
+
+	div(:div_error_box, :xpath => '//div[contains(@class,\'errorbox\')][1]')
 
 	def get_element_by_id ( id )
 		@browser.element( id: id )
