@@ -7,7 +7,7 @@ Feature: Check the info checkbox on the frontend
     Given I am on the fundraising frontpage
     And I select the deposit donation option
     And I click on the continue button
-    And I wait a second
+    And The address details form shows
     When I select the private donation option
     And I enter random valid private address data
     And I wait a second

@@ -2,7 +2,11 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Then(/^The paypal form shows$/) do
-  expect(on(FrontendPaypalPage).div_xpt_content_main_element.visible?).to be true
+	on(FrontendPaypalPage) do | page |
+		page.wait_until do
+			page.div_xpt_content_main_element.visible?
+		end
+	end
 end
 
 And(/^The paypal should be the surname and name$/) do

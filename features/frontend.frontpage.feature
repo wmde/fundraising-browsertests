@@ -24,7 +24,6 @@ Feature: Checks the frontpage ui on the frontend
   Scenario Outline: Checks if the account details shows and hides
     When I select the <donation_option> option
     And I click on the continue button
-    And I wait a second
     Then The account details form <account_details_visibility>
 
 
@@ -40,7 +39,6 @@ Feature: Checks the frontpage ui on the frontend
     Given I select the debit donation option
     And I click on the continue button
     When I select the <account_option> option
-    And I wait a second
     Then The IBAN details form <iban_visibility>
     And The NONIBAN details form <noniban_visibility>
 
@@ -54,7 +52,6 @@ Feature: Checks the frontpage ui on the frontend
     Given I select the debit donation option
     And I click on the continue button
     When I select the <donator_option> option
-    And I wait a second
     Then The company field <company_visibility>
     And The first_name field <first_name_visibility>
 
@@ -67,7 +64,6 @@ Feature: Checks the frontpage ui on the frontend
   Scenario: Checks if the anonymous option hides on debit
     When I select the debit donation option
     And I click on the continue button
-    And I wait a second
     Then The anonymous option hides
 
 

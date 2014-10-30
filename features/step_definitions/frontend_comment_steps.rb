@@ -5,16 +5,16 @@ And(/^I finished a (private|business) debit donation with iban$/) do | address_t
 	step 'I am on the fundraising frontpage'
 	step 'I select the debit donation option'
 	step 'I click on the continue button'
-	step 'I wait a second'
+	step 'The address details form shows'
 	step 'I enter a valid german iban'
 	step "I select the #{address_type} donation option"
 	step "I enter random valid #{address_type} address data"
 	step 'I click on the done button'
-	step 'I wait a second'
+	step 'The debit confirmation form shows'
 	step 'I confirm the debit contract'
 	step 'I confirm the notification contract'
 	step 'I click on the done button'
-	step 'I wait a second'
+	step 'The debit receipt shows'
 end
 
 Given(/^I click on the add comment link$/) do

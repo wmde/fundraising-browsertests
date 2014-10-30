@@ -7,7 +7,7 @@ Feature: Check the address validation on the frontend
     Given I am on the fundraising frontpage
     And I select the deposit donation option
     And I click on the continue button
-    And I wait a second
+    And The address details form shows
 
   Scenario Outline: Checks if insufficient address data stops the process
     And I select the private donation option

@@ -2,7 +2,11 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Then(/^The debit confirmation form shows$/) do
-  expect(on(FrontendDebitPage).get_donation_sepa_confirmation_element.exists?).to be true
+	on(FrontendDebitPage) do | page |
+		page.wait_until do
+			page.get_donation_sepa_confirmation_element.exists?
+		end
+	end
 end
 
 

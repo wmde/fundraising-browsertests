@@ -9,7 +9,7 @@ Feature: Check the functions of the membership from
     Given I am on the fundraising frontpage
     And I select the deposit donation option
     And I click on the continue button
-    And I wait a second
+    And The address details form shows
     When I select the <address_type> donation option
     And I enter random valid <address_type> address data
     And I click on the done button

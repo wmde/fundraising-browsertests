@@ -11,11 +11,10 @@ Feature: Check the paypal process on the frontend
   Scenario Outline: Checks if the chosen value is displayed correctly
     When I select the <option> option
     And I click on the continue button
-    And I wait a second
+    And The address details form shows
     And I select the anonymous donation option
     And I wait a second
     And I click on the done button
-    And I wait a second
     Then The paypal form shows
     And The paypal donation amount should show <value> Euro
 
@@ -31,7 +30,7 @@ Feature: Check the paypal process on the frontend
 
   Scenario Outline: Check the non anonymous paypal donation
     Given I click on the continue button
-    And I wait a second
+    And The address details form shows
     When I select the <address_type> donation option
     And I enter random valid <address_type> address data
     And I wait a second

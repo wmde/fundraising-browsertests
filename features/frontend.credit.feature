@@ -7,14 +7,13 @@ Feature: Check the credit process on the frontend
     Given I am on the fundraising frontpage
     And I select the credit donation option
     And I click on the continue button
-    And I wait a second
+    And The address details form shows
 
 
   Scenario: Check the anonymous credit card donation
     When I select the anonymous donation option
     And I wait a second
     And I click on the done button
-    And I wait a second
     Then The credit card form shows
 
 
@@ -23,7 +22,6 @@ Feature: Check the credit process on the frontend
     And I enter random valid private address data
     And I wait a second
     And I click on the done button
-    And I wait a second
     Then The credit card form shows
     And The cardholder should be the surname and name
 
@@ -33,5 +31,4 @@ Feature: Check the credit process on the frontend
     And I enter random valid business address data
     And I wait a second
     And I click on the done button
-    And I wait a second
     Then The credit card form shows

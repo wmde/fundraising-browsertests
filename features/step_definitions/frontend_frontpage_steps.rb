@@ -18,7 +18,11 @@ end
 
 Then(/^The account details form (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
-  expect(on(FrontendFrontPage).label_iban_element.visible?).to be value
+	on(FrontendFrontPage) do | page |
+		page.wait_until do
+			page.input_bank_code_element.visible? == value
+		end
+	end
 end
 
 
@@ -33,28 +37,48 @@ end
 
 Then(/^The company field (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
-  expect(on(FrontendFrontPage).input_company_name_element.visible?).to be value
+	on(FrontendFrontPage) do | page |
+		page.wait_until do
+			page.input_company_name_element.visible? == value
+		end
+	end
 end
 
 Then(/^The first_name field (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
-  expect(on(FrontendFrontPage).input_first_name_element.visible?).to be value
+	on(FrontendFrontPage) do | page |
+		page.wait_until do
+			page.input_first_name_element.visible? == value
+		end
+	end
 end
 
 
 Then(/^The IBAN details form (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
-  expect(on(FrontendFrontPage).input_iban_element.visible?).to be value
+	on(FrontendFrontPage) do | page |
+		page.wait_until do
+			page.input_iban_element.visible? == value
+		end
+	end
 end
 
 Then(/^The NONIBAN details form (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
-  expect(on(FrontendFrontPage).input_bank_code_element.visible?).to be value
+	on(FrontendFrontPage) do | page |
+		page.wait_until do
+			page.input_bank_code_element.visible? == value
+		end
+	end
 end
 
 
 Then(/^The anonymous option hides$/) do
-  expect(on(FrontendFrontPage).label_anonymous_element.visible?).to be false
+	on(FrontendFrontPage) do | page |
+		page.wait_until do
+			!page.label_anonymous_element.visible?
+		end
+	end
 end
 
 

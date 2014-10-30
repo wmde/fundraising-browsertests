@@ -11,7 +11,7 @@ Feature: Check the deposit process on the frontend
   Scenario Outline: Checks if deposit donation transfers the right amount
     When I select the <option> option
     And I click on the continue button
-    And I wait a second
+    And The address details form shows
     And I select the anonymous donation option
     And I wait a second
     And I click on the done button
@@ -31,7 +31,7 @@ Feature: Check the deposit process on the frontend
 
   Scenario Outline: Checks if valid address data leads to a correct receipt
     Given I click on the continue button
-    And I wait a second
+    And The address details form shows
     When I select the <address_type> donation option
     And I enter random valid <address_type> address data
     And I click on the done button

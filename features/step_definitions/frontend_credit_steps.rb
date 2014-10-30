@@ -2,7 +2,11 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Then(/^The credit card form shows$/) do
-  expect(on(FrontendCreditPage).input_holder_element.visible?).to be true
+	on(FrontendCreditPage) do | page |
+		page.wait_until do
+			page.input_holder_element.visible?
+		end
+	end
 end
 
 And(/^The cardholder should be the surname and name$/) do
