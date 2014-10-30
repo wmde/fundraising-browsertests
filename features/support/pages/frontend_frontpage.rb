@@ -11,8 +11,7 @@ class FrontendFrontPage
   #TODO id in template
   div(:div_period_regularly, :css => 'div.periode-2-list')
 
-  #TODO id in template
-  button(:button_continue, :xpath => '//button[contains(@class,\'f-right\')]')
+  button(:button_continue, :id => 'continueFormSubmit')
   button(:button_done, :id => 'donFormSubmit')
 
   label(:label_private, :xpath => compose_label_xpath_for_radio('address-type-1'))
