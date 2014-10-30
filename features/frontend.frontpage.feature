@@ -24,7 +24,7 @@ Feature: Checks the frontpage ui on the frontend
   Scenario Outline: Checks if the account details shows and hides
     When I select the <donation_option> option
     And I click on the continue button
-    Then The account details form <account_details_visibility>
+    Then The IBAN details form <account_details_visibility>
 
 
   Examples:
