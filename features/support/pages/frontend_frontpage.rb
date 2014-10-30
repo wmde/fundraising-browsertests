@@ -28,13 +28,13 @@ class FrontendFrontPage
 
   def get_random_address_data ()
     address_data = Hash.new
-    address_data['company-name'] = generate_random_string()
-    address_data['first-name'] = generate_random_string()
-    address_data['last-name'] = generate_random_string()
-    address_data['street'] = generate_random_string()
-    address_data['post-code'] = generate_random_zipcode()
-    address_data['city'] = generate_random_string()
-    address_data['email'] = generate_random_string() + "@example.com"
+    address_data['company-name'] = generate_random_string
+    address_data['first-name'] = generate_random_string
+    address_data['last-name'] = generate_random_string
+    address_data['street'] = generate_random_string
+    address_data['post-code'] = generate_random_zipcode
+    address_data['city'] = generate_random_string
+    address_data['email'] = generate_random_string + "@example.com"
 
     address_data
   end
