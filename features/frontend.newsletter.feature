@@ -15,5 +15,5 @@ Feature: Check the info checkbox on the frontend
   Scenario: Checks if the newsletter info is saved
     When I select the send information option
     And I click on the done button
-    Then The donation sheet shows
+    Then The deposit donation confirmation shows
     And The send information text shows
