@@ -4,7 +4,7 @@
 Feature: Check the comment function on the frontend
 
   Background:
-    Given I finished a debit donation
+    Given I finished a private debit donation with iban
 
   Scenario: Checks the comment can be submitted
     Given I click on the add comment link

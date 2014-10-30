@@ -1,7 +1,7 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer <christoph.fischer@wikimedia.de> <christoph.fischer@wikimedia.de>
 
-And(/^I finished a debit donation$/) do
+And(/^I finished a private debit donation with iban$/) do
 	step 'I am on the fundraising frontpage'
 	step 'I select the debit donation option'
 	step 'I click on the continue button'
