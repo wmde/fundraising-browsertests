@@ -8,12 +8,12 @@ def generate_random_string(length=8)
   return string
 end
 
-def generate_random_amount()
+def generate_random_amount
   prng = Random.new
   return prng.rand(1..99999)
 end
 
-def generate_random_zipcode()
+def generate_random_zipcode
   prng = Random.new
   return prng.rand(10000..99999)
 end
