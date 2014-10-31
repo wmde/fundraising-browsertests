@@ -2,11 +2,11 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Then(/^The debit confirmation form shows$/) do
-	 on(FrontendDebitPage) do | page |
- 		 page.wait_until do
-  			 page.get_donation_sepa_confirmation_element.exists?
-  		end
- 	end
+  on(FrontendDebitPage) do | page |
+    page.wait_until do
+      page.get_donation_sepa_confirmation_element.exists?
+    end
+  end
 end
 
 And(/^The debit donation amount should show (.*) Euro$/) do | amount |
@@ -25,8 +25,8 @@ end
 
 # Example data see http://www.unfcu.org/WorkArea/DownloadAsset.aspx?id=1056
 And(/^I enter a valid iban and bic$/) do
-	 on(FrontendFrontPage).input_iban = 'BE68539007547034'  # ###Fake
-	 on(FrontendFrontPage).input_bic = 'CITIBEBXXXX'
+  on(FrontendFrontPage).input_iban = 'BE68539007547034'  # ###Fake
+  on(FrontendFrontPage).input_bic = 'CITIBEBXXXX'
 end
 
 When(/^I confirm the debit contract$/) do

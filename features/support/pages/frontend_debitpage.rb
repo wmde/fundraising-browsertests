@@ -13,5 +13,3 @@ class FrontendDebitPage
     @browser.element(id: 'donation-sepa-confirmation')
   end
 end
-
-

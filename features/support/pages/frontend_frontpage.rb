@@ -3,10 +3,10 @@
 
 class FrontendFrontPage
   include PageObject
-	 include FrontendAddressForm
-	 include FrontendRadioMap
+  include FrontendAddressForm
+  include FrontendRadioMap
 
-  page_url ENV["FRONTEND_URL"]
+  page_url ENV['FRONTEND_URL']
 
   # TODO id in template
   div(:div_period_regularly, css: 'div.periode-2-list')
@@ -33,7 +33,7 @@ class FrontendFrontPage
     address_data['street'] = generate_random_string
     address_data['post-code'] = generate_random_zipcode
     address_data['city'] = generate_random_string
-    address_data['email'] = generate_random_string + "@example.com"
+    address_data['email'] = generate_random_string + '@example.com'
 
     address_data
   end

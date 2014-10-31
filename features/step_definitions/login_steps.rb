@@ -3,8 +3,8 @@
 
 When(/^User enters valid credentials$/) do
   on(LoginPage) do | page |
-    page.username = ENV["BACKEND_USERNAME"]
-    page.password = ENV["BACKEND_PASSWORD"]
+    page.username = ENV['BACKEND_USERNAME']
+    page.password = ENV['BACKEND_PASSWORD']
   end
 
 end
