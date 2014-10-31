@@ -11,7 +11,6 @@ class FrontendCreditPage
       text_field(:input_cvc_code,  :id => 'cvc-code', frame: inner_frame)
     end
   end
-
 end
 
 

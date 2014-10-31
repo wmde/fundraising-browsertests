@@ -10,5 +10,4 @@ class FrontendDebitReceiptPage
   def get_label_element_to_radio ( radio_id )
     @browser.element(xpath: compose_label_xpath_for_radio( radio_id ))
   end
-
 end

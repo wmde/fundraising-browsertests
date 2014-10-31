@@ -12,7 +12,6 @@ class FrontendDebitPage
   def get_donation_sepa_confirmation_element ()
     @browser.element(id: 'donation-sepa-confirmation')
   end
-
 end
 
 

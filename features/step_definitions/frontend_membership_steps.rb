@@ -1,7 +1,6 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
-
 Then(/^The (private|business) membership address data should be the same$/) do | address_type |
 	if address_type == "private"
 		expect(on(FrontendReceiptPage).input_first_name_element.value).to be == @address_data['first-name']

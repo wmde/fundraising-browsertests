@@ -3,8 +3,8 @@
 
 class FrontendFrontPage
   include PageObject
-	include FrontendAddressForm
-	include FrontendRadioMap
+	 include FrontendAddressForm
+	 include FrontendRadioMap
 
   page_url ENV["FRONTEND_URL"]
 

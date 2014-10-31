@@ -1,7 +1,6 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
-
 When(/^I click on the become member link$/) do
   on(FrontendReceiptPage).a_become_member.select
 end

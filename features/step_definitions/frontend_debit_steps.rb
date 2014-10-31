@@ -9,7 +9,6 @@ Then(/^The debit confirmation form shows$/) do
 	end
 end
 
-
 And(/^The debit donation amount should show (.*) Euro$/) do | amount |
   expect(on(FrontendDebitPage).get_donation_amount_element.text).to be == "#{amount}€"
 end
@@ -19,7 +18,6 @@ And(/^I enter valid account data$/) do
   on(FrontendFrontPage).input_account_number = '0648489890'
   on(FrontendFrontPage).input_bank_code = '50010517'
 end
-
 
 And(/^I enter a valid german iban$/) do
   on(FrontendFrontPage).input_iban = 'DE12500105170648489890'  ####Fake

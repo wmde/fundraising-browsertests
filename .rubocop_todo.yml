@@ -27,45 +27,13 @@ Style/ClassVars:
 Style/CommentAnnotation:
   Enabled: false
 
-# Offense count: 7
-# Cop supports --auto-correct.
-Style/DefWithParentheses:
-  Enabled: false
-
 # Offense count: 9
 Style/Documentation:
-  Enabled: false
-
-# Offense count: 13
-# Cop supports --auto-correct.
-Style/EmptyLines:
-  Enabled: false
-
-# Offense count: 5
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/EmptyLinesAroundClassBody:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/EmptyLiteral:
-  Enabled: false
-
-# Offense count: 56
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/HashSyntax:
   Enabled: false
 
 # Offense count: 1
 # Configuration parameters: MaxLineLength.
 Style/IfUnlessModifier:
-  Enabled: false
-
-# Offense count: 22
-# Cop supports --auto-correct.
-Style/IndentationConsistency:
   Enabled: false
 
 # Offense count: 76
