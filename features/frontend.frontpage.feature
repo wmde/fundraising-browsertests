@@ -6,11 +6,12 @@ Feature: Checks the frontpage ui on the frontend
   Background:
     Given I am on the fundraising frontpage
 
+  @ui_only
   Scenario: Checks if the address form shows when continuing
     When I click on the continue button
     Then The address details form shows
 
-
+  @ui_only
   Scenario Outline: Checks if the regularly bar shows and hides
     When I select the <interval> option
     Then The regularly option bar <visibility>
@@ -20,7 +21,7 @@ Feature: Checks the frontpage ui on the frontend
      | regularly donation | shows |
      | single donation | hides |
 
-
+  @ui_only
   Scenario Outline: Checks if the account details shows and hides
     When I select the <donation_option> option
     And I click on the continue button
@@ -34,7 +35,7 @@ Feature: Checks the frontpage ui on the frontend
     | debit donation | shows                       |
     | paypal donation | hides                      |
 
-
+  @ui_only
   Scenario Outline: Checks if the IBAN details shows and hides
     Given I select the debit donation option
     And I click on the continue button
@@ -47,7 +48,7 @@ Feature: Checks the frontpage ui on the frontend
     | iban | shows | hides |
     | noiban | hides | shows |
 
-
+  @ui_only
   Scenario Outline: Checks if the business data shows and hides
     Given I select the debit donation option
     And I click on the continue button
@@ -60,13 +61,13 @@ Feature: Checks the frontpage ui on the frontend
     | business donation | shows | hides |
     | private donation | hides | shows |
 
-
+  @ui_only
   Scenario: Checks if the anonymous option hides on debit
     When I select the debit donation option
     And I click on the continue button
     Then The anonymous option hides
 
-
+  @ui_only
   Scenario Outline: Checks if the selectable amount displayed is correct
     When I select the <option> option
     And I click on the continue button
@@ -82,7 +83,7 @@ Feature: Checks the frontpage ui on the frontend
     #| 100 euro | 100,00 |
     | 250 euro | 250,00 |
 
-
+  @ui_only
   Scenario: Checks if the amount displayed is correct
     When I enter a valid random amount in the amount field
     And I click on the continue button
