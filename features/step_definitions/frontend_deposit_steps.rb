@@ -6,9 +6,9 @@ And(/^The donation amount should show (.*) Euro$/) do | amount |
 end
 
 Then(/^The deposit donation confirmation shows$/) do
-	on(FrontendReceiptPage) do | page |
-		page.wait_until do
-			page.div_deposit_confirmation_element.visible?
-		end
-	end
+	 on(FrontendReceiptPage) do | page |
+ 		 page.wait_until do
+  			 page.div_deposit_confirmation_element.visible?
+  		end
+ 	end
 end

@@ -6,7 +6,7 @@ require 'require_all'
 
 config = YAML.load_file("config/config.yml")
 config.each do |k, v|
-  if !ENV["#{k}"]
+  unless ENV["#{k}"]
     ENV["#{k}"] = "#{v}"
   end
 end

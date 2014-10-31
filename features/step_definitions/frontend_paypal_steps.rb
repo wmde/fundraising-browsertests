@@ -2,11 +2,11 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Then(/^The paypal form shows$/) do
-	on(FrontendPaypalPage) do | page |
-		page.wait_until do
-			page.div_xpt_content_main_element.visible?
-		end
-	end
+	 on(FrontendPaypalPage) do | page |
+ 		 page.wait_until do
+  			 page.div_xpt_content_main_element.visible?
+  		end
+ 	end
 end
 
 And(/^The paypal should be the surname and name$/) do
@@ -29,13 +29,13 @@ And(/^I click on the paypal continue button$/) do
 end
 
 Then(/^The normal donation confirmation shows$/) do
-	on(FrontendReceiptPage) do | page |
-		page.wait_until do
-			page.div_normal_confirmation_element.visible?
-		end
-	end
+	 on(FrontendReceiptPage) do | page |
+ 		 page.wait_until do
+  			 page.div_normal_confirmation_element.visible?
+  		end
+ 	end
 end
 
 And(/^I click on the paypal back button$/) do
-	on(FrontendPaypalPage).a_back_to_frontend_element.click
+	 on(FrontendPaypalPage).a_back_to_frontend_element.click
 end

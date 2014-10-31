@@ -8,7 +8,7 @@ class FrontendFrontPage
 
   page_url ENV["FRONTEND_URL"]
 
-  #TODO id in template
+  # TODO id in template
   div(:div_period_regularly, css: 'div.periode-2-list')
 
   button(:button_continue, id: 'continueFormSubmit')

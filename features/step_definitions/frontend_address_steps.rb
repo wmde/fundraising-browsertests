@@ -2,7 +2,7 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 And(/^I enter random valid (private|business) address data$/) do | address_type |
-  @address_data = on(FrontendFrontPage).get_random_address_data()
+  @address_data = on(FrontendFrontPage).get_random_address_data
 
   if address_type == "private"
     on(FrontendFrontPage).input_first_name = @address_data['first-name']
@@ -22,29 +22,29 @@ Then(/^Address from should be visible$/) do
 end
 
 And(/^I erase the city data field$/) do
-	on(FrontendFrontPage).input_city_element.clear
+	 on(FrontendFrontPage).input_city_element.clear
 end
 
 And(/^I erase the street data field$/) do
-	on(FrontendFrontPage).input_street_element.clear
+	 on(FrontendFrontPage).input_street_element.clear
 end
 
 And(/^I erase the first name data field$/) do
-	on(FrontendFrontPage).input_first_name_element.clear
+	 on(FrontendFrontPage).input_first_name_element.clear
 end
 
 And(/^I erase the email data field$/) do
-	on(FrontendFrontPage).input_email_element.clear
+	 on(FrontendFrontPage).input_email_element.clear
 end
 
 And(/^I enter an invalid email/) do
-	on(FrontendFrontPage).input_email = 'test@reallynotavaliddomainforsuretobesure.complicated'
+	 on(FrontendFrontPage).input_email = 'test@reallynotavaliddomainforsuretobesure.complicated'
 end
 
 And(/^I erase the postcode data field$/) do
-	on(FrontendFrontPage).input_post_code_element.clear
+	 on(FrontendFrontPage).input_post_code_element.clear
 end
 
 And(/^I enter an invalid postcode$/) do
-	on(FrontendFrontPage).input_post_code = '2345'
+	 on(FrontendFrontPage).input_post_code = '2345'
 end

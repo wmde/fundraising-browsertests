@@ -11,8 +11,8 @@ class FrontendCommentPage
   text_area(:text_comment,  id: 'feedback-message')
   button(:button_publish,  id: 'publishComment')
 
-	 def get_element_by_id ( id )
- 		@browser.element( id: id )
+	 def get_element_by_id( id )
+ 		 @browser.element( id: id )
  	end
 end
 

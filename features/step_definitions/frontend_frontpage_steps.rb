@@ -17,62 +17,62 @@ end
 Then(/^The account details form (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
 	 on(FrontendFrontPage) do | page |
- 		page.wait_until do
- 			page.input_bank_code_element.visible? == value
- 		end
+ 		 page.wait_until do
+  			 page.input_bank_code_element.visible? == value
+  		end
  	end
 end
 
 And(/^The address details form shows$/) do
-	on(FrontendFrontPage) do | page |
-		page.wait_until do
-			page.label_private_element.visible?
-		end
-	end
+	 on(FrontendFrontPage) do | page |
+ 		 page.wait_until do
+  			 page.label_private_element.visible?
+  		end
+ 	end
 end
 
 Then(/^The company field (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
 	 on(FrontendFrontPage) do | page |
- 		page.wait_until do
- 			page.input_company_name_element.visible? == value
- 		end
+ 		 page.wait_until do
+  			 page.input_company_name_element.visible? == value
+  		end
  	end
 end
 
 Then(/^The first_name field (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
 	 on(FrontendFrontPage) do | page |
- 		page.wait_until do
- 			page.input_first_name_element.visible? == value
- 		end
+ 		 page.wait_until do
+  			 page.input_first_name_element.visible? == value
+  		end
  	end
 end
 
 Then(/^The IBAN details form (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
 	 on(FrontendFrontPage) do | page |
- 		page.wait_until do
- 			page.input_iban_element.visible? == value
- 		end
+ 		 page.wait_until do
+  			 page.input_iban_element.visible? == value
+  		end
  	end
 end
 
 Then(/^The NONIBAN details form (shows|hides)$/) do | visibility |
   value = visibility_to_boolean( visibility )
 	 on(FrontendFrontPage) do | page |
- 		page.wait_until do
- 			page.input_bank_code_element.visible? == value
- 		end
+ 		 page.wait_until do
+  			 page.input_bank_code_element.visible? == value
+  		end
  	end
 end
 
 Then(/^The anonymous option hides$/) do
-	on(FrontendFrontPage) do | page |
-		page.wait_until do
-			!page.label_anonymous_element.visible?
-		end
-	end
+	 on(FrontendFrontPage) do | page |
+ 		 page.wait_until do
+  			 !page.label_anonymous_element.visible?
+  		end
+ 	end
 end
 
 And(/^I click on the continue button$/) do

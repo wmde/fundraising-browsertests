@@ -34,12 +34,12 @@ class FrontendReceiptPage
 
 	 div(:div_error_box, xpath: '//div[contains(@class,\'errorbox\')][1]')
 
-	 def get_element_by_id ( id )
- 		@browser.element( id: id )
+	 def get_element_by_id( id )
+ 		 @browser.element( id: id )
  	end
 
   def get_donation_amount_element
-    #TODO id in template
+    # TODO id in template
     @browser.element(xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
   end
 end
