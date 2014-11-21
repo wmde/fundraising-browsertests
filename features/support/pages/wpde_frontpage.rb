@@ -38,5 +38,9 @@ class WikipediaDeFrontPage
 
   def get_donation_amount_element
     @browser.element(xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
-  end
+	end
+
+	def switch_to_popup
+		@browser.wd.switch_to.window @browser.wd.window_handles.last
+	end
 end
