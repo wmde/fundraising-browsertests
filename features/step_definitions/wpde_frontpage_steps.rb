@@ -53,6 +53,8 @@ Then(/^The donation lightbox shows$/) do
 end
 
 And(/^I switch to the new window$/) do
+	#TODO think of a check that window is open
+	sleep(1)
 	on(WikipediaDeFrontPage).switch_to_popup
 end
 
