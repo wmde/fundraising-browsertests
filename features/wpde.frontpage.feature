@@ -90,10 +90,3 @@ Feature: Checks the ui on the wikipedia.de banner lightbox
     | amount75 | 75,00 |
     | amount100 | 100,00 |
     | amount250 | 250,00 |
-
-  @ui_only
-  #Scenario: Checks if the amount displayed is correct
-  #  When I enter an random valid amount
-  #  And I click on the debit button
-  #  And The donation lightbox shows
-  #  Then The given amount should show
