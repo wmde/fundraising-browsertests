@@ -6,6 +6,7 @@ Feature: Checks the ui on the wikipedia.de banner lightbox
   Background:
     Given I am on the wikipedia.de frontpage
     And The wikipedia.de lightbox banner shows
+    And I change the lightbox to testmode
 
   @ui_only
   Scenario: Checks if the lightbox shows when continuing
