@@ -6,6 +6,7 @@
 
 # local configuration
 FRONTEND_URL: "http://localhost/frontend/"
+WPDE_URL: "http://wikipedia.de/"
 
 # paypal only
 PAYPAL_USERNAME: ""
