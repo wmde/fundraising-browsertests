@@ -55,3 +55,7 @@ end
 And(/^I switch to the new window$/) do
 	on(WikipediaDeFrontPage).switch_to_popup
 end
+
+And(/^I change the lightbox to testmode$/) do
+	on(WikipediaDeFrontPage).switch_to_testmode
+end

@@ -43,4 +43,8 @@ class WikipediaDeFrontPage
 	def switch_to_popup
 		@browser.wd.switch_to.window @browser.wd.window_handles.last
 	end
+
+	def switch_to_testmode
+		@browser.execute_script("$('#donForm').attr('action', 'fundraising/proxy.php?page=L10h16&skin=10h16&piwik_campaign=wpde_141118&piwik_kwd=wpde-141118-ffb&browsertest=true')")
+	end
 end
