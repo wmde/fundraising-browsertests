@@ -34,7 +34,10 @@ module FrontendRadioMap
     'business donation' => 'address-type-2',
     'anonymous donation' => 'address-type-3',
 
-    'send information' => 'send-information'
+    'send information' => 'send-information',
+
+		'mrs' => 'salutation-1',
+		'mr' => 'salutation-1'
   }
 
   def get_label_element_to_radio(radio_id)
