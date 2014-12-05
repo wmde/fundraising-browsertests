@@ -5,7 +5,7 @@ def generate_random_string(length = 8)
   chars = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'
   string = ''
   length.times { string << chars[rand(chars.size)] }
-  string
+  string.capitalize
 end
 
 def generate_random_amount
