@@ -60,3 +60,7 @@ Then(/^The error box shows$/) do
     end
   end
 end
+
+Given(/^I am on the stand alone membership formpage$/) do
+	visit(FrontendMembershipPage)
+end
