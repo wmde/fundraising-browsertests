@@ -64,6 +64,7 @@ Feature: Check the functions of the stand alone membership from
     And I select the business donation option
     And I enter random valid business address data
     And I enter 10 euro in the amount field
+    And I wait a second
     When I click on the done member button
     Then The error box shows
 
