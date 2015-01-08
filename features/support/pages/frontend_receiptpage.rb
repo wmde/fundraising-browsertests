@@ -21,7 +21,7 @@ class FrontendReceiptPage
   radio(:radio_amount2, id: 'amount-2')
   radio(:radio_amount3, id: 'amount-3')
 
-	hidden_field(:hidden_membership_type, id: 'membership_type')
+	hidden_field(:hidden_membership_type, id: 'membership-type')
 
   text_field(:input_amount,  id: 'amount-6')
 
