@@ -7,6 +7,19 @@ Feature: Checks the frontpage ui on the frontend
     Given I am on the fundraising frontpage
 
   @ui_only
+  Scenario Outline: Checks if the account details shows and hides
+    When I select the <donation_option> option
+    And I click on the continue button
+    Then The IBAN details form <account_details_visibility>
+
+  Examples:
+    | donation_option | account_details_visibility |
+    | deposit donation | hides                     |
+    | credit donation | hides                      |
+    | debit donation | shows                       |
+    | paypal donation | hides                      |
+
+  @ui_only
   Scenario: Checks if the address form shows when continuing
     When I click on the continue button
     Then The address details form shows
@@ -17,23 +30,9 @@ Feature: Checks the frontpage ui on the frontend
     Then The regularly option bar <visibility>
 
   Examples:
-     | interval | visibility |
-     | regularly donation | shows |
-     | single donation | hides |
-
-  @ui_only
-  Scenario Outline: Checks if the account details shows and hides
-    When I select the <donation_option> option
-    And I click on the continue button
-    Then The IBAN details form <account_details_visibility>
-
-
-  Examples:
-    | donation_option | account_details_visibility |
-    | deposit donation | hides                     |
-    | credit donation | hides                      |
-    | debit donation | shows                       |
-    | paypal donation | hides                      |
+    | interval | visibility |
+    | regularly donation | shows |
+    | single donation | hides |
 
   @ui_only
   Scenario Outline: Checks if the IBAN details shows and hides
