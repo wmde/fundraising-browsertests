@@ -2,14 +2,14 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Then(/^The debit confirmation form shows$/) do
-  on(FrontendDebitPage) do | page |
+  on(FrontendDebitPage) do |page|
     page.wait_until do
       page.get_donation_sepa_confirmation_element.exists?
     end
   end
 end
 
-And(/^The debit donation amount should show (.*) Euro$/) do | amount |
+And(/^The debit donation amount should show (.*) Euro$/) do |amount|
   expect(on(FrontendDebitPage).get_donation_amount_element.text).to be == "#{amount}€"
 end
 

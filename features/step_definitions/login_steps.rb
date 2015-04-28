@@ -2,11 +2,10 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 When(/^User enters valid credentials$/) do
-  on(LoginPage) do | page |
+  on(LoginPage) do |page|
     page.username = ENV['BACKEND_USERNAME']
     page.password = ENV['BACKEND_PASSWORD']
   end
-
 end
 
 Given(/^I am on the login page$/) do
@@ -18,7 +17,7 @@ And(/^User clicks on login button$/) do
 end
 
 Then(/^Username-Link should be shown$/) do
-  on(BackendPage) do | page |
+  on(BackendPage) do |page|
     page.wait_until do
       page.username_link?
     end
@@ -26,7 +25,7 @@ Then(/^Username-Link should be shown$/) do
 end
 
 Then(/^Logout-Link should be shown$/) do
-  on(BackendPage) do | page |
+  on(BackendPage) do |page|
     page.wait_until do
       page.logout_link?
     end

@@ -8,7 +8,7 @@ Then(/^The personal data sheet shows$/) do
   expect(on(FrontendReceiptPage).div_personal_data_sheet_element.visible?).to be true
 end
 
-And(/^The (private|business) data on the receipt page should be the same$/) do | address_type |
+And(/^The (private|business) data on the receipt page should be the same$/) do |address_type|
   if address_type == 'private'
     name =  @address_data['first-name'] + ' ' + @address_data['last-name']
     expect(on(FrontendReceiptPage).span_confirm_name).to be == name

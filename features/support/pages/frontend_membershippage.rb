@@ -5,7 +5,7 @@ class FrontendMembershipPage
   include PageObject
   include FrontendAddressForm
 
-  page_url ENV['FRONTEND_URL'] + "spenden/Mitgliedschaft"
+  page_url ENV['FRONTEND_URL'] + 'spenden/Mitgliedschaft'
 
   div(:div_personal_data_sheet, id: 'personal-data')
 

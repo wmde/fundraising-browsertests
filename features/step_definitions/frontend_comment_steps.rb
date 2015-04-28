@@ -1,7 +1,7 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
-And(/^I finished a (private|business) debit donation with iban$/) do | address_type |
+And(/^I finished a (private|business) debit donation with iban$/) do |address_type|
   step 'I am on the fundraising frontpage'
   step 'I select the debit donation option'
   step 'I click on the continue button'
@@ -30,7 +30,7 @@ And(/^I click the submit comment button$/) do
 end
 
 Then(/^a positive feedback should show$/) do
-  on(FrontendCommentPage) do | page |
+  on(FrontendCommentPage) do |page|
     page.wait_until do
       page.get_element_by_id('positive-feedback')
     end

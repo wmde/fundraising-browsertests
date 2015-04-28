@@ -2,7 +2,7 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Then(/^The paypal form shows$/) do
-  on(FrontendPaypalPage) do | page |
+  on(FrontendPaypalPage) do |page|
     page.wait_until do
       page.div_xpt_content_main_element.visible?
     end
@@ -14,7 +14,7 @@ And(/^The paypal should be the surname and name$/) do
   expect(on(FrontendPaypalPage).input_holder_element.value).to be == name
 end
 
-And(/^The paypal donation amount should show (.*) Euro$/) do | amount |
+And(/^The paypal donation amount should show (.*) Euro$/) do |amount|
   expect(on(FrontendPaypalPage).span_amount_element.text).to be == "#{amount}"
 end
 
@@ -29,7 +29,7 @@ And(/^I click on the paypal continue button$/) do
 end
 
 Then(/^The normal donation confirmation shows$/) do
-  on(FrontendReceiptPage) do | page |
+  on(FrontendReceiptPage) do |page|
     page.wait_until do
       page.div_normal_confirmation_element.visible?
     end

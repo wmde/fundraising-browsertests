@@ -13,7 +13,6 @@ module BannerForm
   button(:button_credit, id: 'btnCreditCard')
   button(:button_paypal, id: 'btnPayPal')
 
-
   def click_banner_amount(amount)
     @browser.element(xpath: "//input[@id = \'#{amount}\']").click
   end
