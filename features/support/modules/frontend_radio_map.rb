@@ -34,13 +34,13 @@ module FrontendRadioMap
     'business donation' => 'address-type-2',
     'anonymous donation' => 'address-type-3',
 
-		'sustaining membership' => 'membership-type-1',
+    'sustaining membership' => 'membership-type-1',
     'active membership' => 'membership-type-2',
 
     'send information' => 'send-information',
 
-		'mrs' => 'salutation-1',
-		'mr' => 'salutation-1'
+    'mrs' => 'salutation-1',
+    'mr' => 'salutation-1'
   }
 
   def get_label_element_to_radio(radio_id)

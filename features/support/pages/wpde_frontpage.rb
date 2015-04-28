@@ -5,11 +5,11 @@ class WikipediaDeFrontPage
   include PageObject
   include FrontendAddressForm
   include FrontendRadioMap
-	include BannerForm
+  include BannerForm
 
   page_url ENV['WPDE_URL']
 
-	form(:form_donation, id: 'donationForm')
+  form(:form_donation, id: 'donationForm')
 
   button(:button_continue, id: 'continueFormSubmit')
   button(:button_done, id: 'donFormSubmit')
@@ -38,13 +38,13 @@ class WikipediaDeFrontPage
 
   def get_donation_amount_element
     @browser.element(xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
-	end
+  end
 
-	def switch_to_popup
-		@browser.wd.switch_to.window @browser.wd.window_handles.last
-	end
+  def switch_to_popup
+    @browser.wd.switch_to.window @browser.wd.window_handles.last
+  end
 
-	def switch_to_testmode
-		@browser.execute_script("$('#donForm').attr('action', 'fundraising/proxy.php?page=L10h16&skin=10h16&piwik_campaign=wpde_141118&piwik_kwd=wpde-141118-ffb&browsertest=true')")
-	end
+  def switch_to_testmode
+    @browser.execute_script("$('#donForm').attr('action', 'fundraising/proxy.php?page=L10h16&skin=10h16&piwik_campaign=wpde_141118&piwik_kwd=wpde-141118-ffb&browsertest=true')")
+  end
 end
