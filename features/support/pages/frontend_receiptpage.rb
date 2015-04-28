@@ -41,7 +41,6 @@ class FrontendReceiptPage
   end
 
   def get_donation_amount_element
-    # TODO id in template
     @browser.element(xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
   end
 end

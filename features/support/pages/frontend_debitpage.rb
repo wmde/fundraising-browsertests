@@ -5,7 +5,6 @@ class FrontendDebitPage
   include PageObject
 
   def get_donation_amount_element
-    # TODO id in template
     @browser.element(xpath: '//p[contains(@class,\'title\')]/child::strong[1]')
   end
 
