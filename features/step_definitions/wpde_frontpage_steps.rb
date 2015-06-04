@@ -41,7 +41,7 @@ And(/^I enter an random valid amount$/) do
 end
 
 And(/^The given amount should show$/) do
-  expect(on(FrontendFrontPage).get_donation_amount_element.text).to be == "#{@amount}€"
+  expect(on(FrontendFrontPage).donation_amount_element.text).to be == "#{@amount}€"
 end
 
 Then(/^The donation lightbox shows$/) do

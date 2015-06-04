@@ -4,13 +4,13 @@
 Then(/^The debit confirmation form shows$/) do
   on(FrontendDebitPage) do |page|
     page.wait_until do
-      page.get_donation_sepa_confirmation_element.exists?
+      page.donation_sepa_confirmation_element.exists?
     end
   end
 end
 
 And(/^The debit donation amount should show (.*) Euro$/) do |amount|
-  expect(on(FrontendDebitPage).get_donation_amount_element.text).to be == "#{amount}€"
+  expect(on(FrontendDebitPage).donation_amount_element.text).to be == "#{amount}€"
 end
 
 # Example data see http://www.iban-bic.com/sample_accounts.html
@@ -30,11 +30,11 @@ And(/^I enter a valid iban and bic$/) do
 end
 
 When(/^I confirm the debit contract$/) do
-  on(FrontendDebitReceiptPage).get_label_element_to_radio('confirm_sepa').click
+  on(FrontendDebitReceiptPage).label_element_to_radio('confirm_sepa').click
 end
 
 And(/^I confirm the notification contract$/) do
-  on(FrontendDebitReceiptPage).get_label_element_to_radio('confirm_shortterm').click
+  on(FrontendDebitReceiptPage).label_element_to_radio('confirm_shortterm').click
 end
 
 Then(/^The debit receipt shows$/) do

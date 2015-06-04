@@ -2,7 +2,7 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 And(/^The donation amount should show (.*) Euro$/) do |amount|
-  expect(on(FrontendReceiptPage).get_donation_amount_element.text).to be == "#{amount}€"
+  expect(on(FrontendReceiptPage).donation_amount_element.text).to be == "#{amount}€"
 end
 
 Then(/^The deposit donation confirmation shows$/) do

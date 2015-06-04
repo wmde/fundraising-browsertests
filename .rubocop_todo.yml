@@ -10,6 +10,12 @@
 Metrics/LineLength:
   Max: 465
 
+Metrics/AbcSize:
+  Max: 16
+
+Metrics/MethodLength:
+  Max: 31
+
 # Offense count: 2
 # Configuration parameters: MinBodyLength.
 Style/GuardClause:
@@ -23,4 +29,7 @@ Style/IfUnlessModifier:
 # Offense count: 1
 # Configuration parameters: EnforcedStyle, MinBodyLength, SupportedStyles.
 Style/Next:
+  Enabled: false
+
+Documentation:
   Enabled: false

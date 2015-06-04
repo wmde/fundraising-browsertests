@@ -23,7 +23,7 @@ class WikipediaDeFrontPage
   text_field(:input_account_number, id: 'account-number')
   text_field(:input_bank_code, id: 'bank-code')
 
-  def get_random_address_data
+  def random_address_data
     address_data = {}
     address_data['company-name'] = generate_random_string
     address_data['first-name'] = generate_random_string
@@ -36,7 +36,7 @@ class WikipediaDeFrontPage
     address_data
   end
 
-  def get_donation_amount_element
+  def donation_amount_element
     @browser.element(xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
   end
 

@@ -6,7 +6,7 @@ Given(/^I am on the fundraising frontpage$/) do
 end
 
 And(/^I select the (.*) option$/) do |radio_name|
-  on(FrontendFrontPage).get_lable_element_from_map(radio_name).click
+  on(FrontendFrontPage).lable_element_from_map(radio_name).click
 end
 
 Then(/^The regularly option bar (shows|hides)$/) do |visibility|
@@ -88,7 +88,7 @@ And(/^I wait a second$/) do
 end
 
 Then(/^The amount display should show (.*) Euro$/) do |amount|
-  expect(on(FrontendFrontPage).get_donation_amount_element.text).to be == "#{amount}€"
+  expect(on(FrontendFrontPage).donation_amount_element.text).to be == "#{amount}€"
 end
 
 When(/^I enter a valid random amount in the amount field$/) do
@@ -97,5 +97,5 @@ When(/^I enter a valid random amount in the amount field$/) do
 end
 
 Then(/^The amount display should show the given amount$/) do
-  expect(on(FrontendFrontPage).get_donation_amount_element.text).to be == "#{@amount},00€"
+  expect(on(FrontendFrontPage).donation_amount_element.text).to be == "#{@amount},00€"
 end

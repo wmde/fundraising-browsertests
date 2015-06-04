@@ -2,10 +2,10 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 And(/^I enter random valid (private|business) address data$/) do |address_type|
-  @address_data = on(FrontendFrontPage).get_random_address_data
+  @address_data = on(FrontendFrontPage).random_address_data
 
   if address_type == 'private'
-    on(FrontendFrontPage).get_lable_element_from_map('mrs').click
+    on(FrontendFrontPage).lable_element_from_map('mrs').click
     on(FrontendFrontPage).input_first_name = @address_data['first-name']
     on(FrontendFrontPage).input_last_name = @address_data['last-name']
   else

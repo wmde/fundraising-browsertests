@@ -32,7 +32,7 @@ end
 Then(/^a positive feedback should show$/) do
   on(FrontendCommentPage) do |page|
     page.wait_until do
-      page.get_element_by_id('positive-feedback')
+      page.element_by_id('positive-feedback')
     end
   end
 end
