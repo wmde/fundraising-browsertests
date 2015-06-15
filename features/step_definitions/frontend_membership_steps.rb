@@ -16,14 +16,16 @@ Then(/^The (private|business) membership address data should be the same$/) do |
 end
 
 And(/^The lower fee rates should be (available|unavailable)$/) do |lower_fee|
+  is_disabled = nil
+
   if lower_fee == 'available'
-    is_disabled = nil
     on(FrontendReceiptPage) do |page|
       page.wait_until do
         page.radio_amount1_element.attribute('disabled').equal? is_disabled
       end
     end
   end
+
   if lower_fee == 'unavailable'
     is_disabled = 'true'
     on(FrontendReceiptPage) do |page|
