@@ -41,6 +41,6 @@ class FrontendReceiptPage
   end
 
   def donation_amount_element
-    browser.element(xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
+    element('strong', xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
   end
 end

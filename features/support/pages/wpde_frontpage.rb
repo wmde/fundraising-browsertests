@@ -37,7 +37,7 @@ class WikipediaDeFrontPage
   end
 
   def donation_amount_element
-    browser.element(xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
+    element('strong', xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
   end
 
   def switch_to_popup
@@ -45,6 +45,6 @@ class WikipediaDeFrontPage
   end
 
   def switch_to_testmode
-    browser.execute_script("$('#donForm').attr('action', 'fundraising/proxy.php?page=L10h16&skin=10h16&piwik_campaign=wpde_141118&piwik_kwd=wpde-141118-ffb&browsertest=true')")
+    execute_script("$('#donForm').attr('action', 'fundraising/proxy.php?page=L10h16&skin=10h16&piwik_campaign=wpde_141118&piwik_kwd=wpde-141118-ffb&browsertest=true')")
   end
 end

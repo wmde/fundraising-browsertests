@@ -30,9 +30,5 @@ And(/^I click the submit comment button$/) do
 end
 
 Then(/^a positive feedback should show$/) do
-  on(FrontendCommentPage) do |page|
-    page.wait_until do
-      page.element_by_id('positive-feedback')
-    end
-  end
+  expect(on(FrontendCommentPage).div_positiv_feedback_element.when_visible).to be_visible
 end
