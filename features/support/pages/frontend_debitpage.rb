@@ -9,6 +9,6 @@ class FrontendDebitPage
   end
 
   def donation_sepa_confirmation_element
-    browser.element(id: 'donation-sepa-confirmation')
+    element('section', id: 'donation-sepa-confirmation')
   end
 end

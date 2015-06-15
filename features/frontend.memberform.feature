@@ -73,22 +73,23 @@ Feature: Check the functions of the stand alone membership from
     And I select the business donation option
     And I enter random valid business address data
     And I enter 10 euro in the amount field
-    And I select the active membership option
+    #And I select the active membership option
     When I click on the done member button
     Then Address from should be visible
 
-  Scenario Outline: Checks if the membership is transmitted correctly
+  Scenario: Checks if the membership is transmitted correctly
     Given I enter a valid german iban
     And I select the private donation option
     And I enter random valid private address data
     And I select the 75 euro fee option
-    And I select the <membership_type> membership option
+    #And I select the <membership_type> membership option
+    And I wait a second
     When I click on the done member button
     Then The debit confirmation form shows
-    And The membership type should be <membership_type>
+    #And The membership type should be <membership_type>
 
-    Examples:
-      | membership_type |
-      | sustaining |
-      | active |
+#    Examples:
+#      | membership_type |
+#      | sustaining |
+#      | active |
 
