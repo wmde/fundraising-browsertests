@@ -37,10 +37,10 @@ class FrontendReceiptPage
   div(:div_error_box, xpath: '//div[contains(@class,\'errorbox\')][1]')
 
   def element_by_id(id)
-    @browser.element(id: id)
+    browser.element(id: id)
   end
 
   def donation_amount_element
-    @browser.element(xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
+    browser.element(xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
   end
 end

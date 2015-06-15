@@ -12,6 +12,6 @@ class FrontendCommentPage
   button(:button_publish,  id: 'publishComment')
 
   def element_by_id(id)
-    @browser.element(id: id)
+    browser.element(id: id)
   end
 end

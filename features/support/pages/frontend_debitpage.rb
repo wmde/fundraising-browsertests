@@ -5,10 +5,10 @@ class FrontendDebitPage
   include PageObject
 
   def donation_amount_element
-    @browser.element(xpath: '//p[contains(@class,\'title\')]/child::strong[1]')
+    browser.element(xpath: '//p[contains(@class,\'title\')]/child::strong[1]')
   end
 
   def donation_sepa_confirmation_element
-    @browser.element(id: 'donation-sepa-confirmation')
+    browser.element(id: 'donation-sepa-confirmation')
   end
 end
