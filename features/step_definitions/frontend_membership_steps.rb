@@ -42,11 +42,7 @@ And(/^I click on the done member button$/) do
 end
 
 Then(/^The membership confirmation shows$/) do
-  on(FrontendReceiptPage) do |page|
-    page.wait_until do
-      page.div_membership_confirmation_element.visible?
-    end
-  end
+  expect(on(FrontendReceiptPage).div_membership_confirmation_element.when_visible).to be_visible
 end
 
 And(/^I enter (\d+) euro in the amount field$/) do |arg|
@@ -54,11 +50,7 @@ And(/^I enter (\d+) euro in the amount field$/) do |arg|
 end
 
 Then(/^The error box shows$/) do
-  on(FrontendReceiptPage) do |page|
-    page.wait_until do
-      page.div_error_box_element.visible?
-    end
-  end
+  expect(on(FrontendReceiptPage).div_error_box_element.when_visible).to be_visible
 end
 
 Given(/^I am on the stand alone membership formpage$/) do

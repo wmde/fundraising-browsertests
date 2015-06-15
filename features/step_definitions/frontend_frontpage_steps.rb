@@ -6,7 +6,7 @@ Given(/^I am on the fundraising frontpage$/) do
 end
 
 And(/^I select the (.*) option$/) do |radio_name|
-  on(FrontendFrontPage).lable_element_from_map(radio_name).click
+  on(FrontendFrontPage).lable_element_from_map(radio_name).when_visible.click
 end
 
 Then(/^The regularly option bar (shows|hides)$/) do |visibility|
@@ -24,11 +24,7 @@ Then(/^The account details form (shows|hides)$/) do |visibility|
 end
 
 And(/^The address details form shows$/) do
-  on(FrontendFrontPage) do |page|
-    page.wait_until do
-      page.label_private_element.visible?
-    end
-  end
+  expect(on(FrontendFrontPage).label_private_element.when_visible).to be_visible
 end
 
 Then(/^The company field (shows|hides)$/) do |visibility|
@@ -68,11 +64,7 @@ Then(/^The NONIBAN details form (shows|hides)$/) do |visibility|
 end
 
 Then(/^The anonymous option hides$/) do
-  on(FrontendFrontPage) do |page|
-    page.wait_until do
-      !page.label_anonymous_element.visible?
-    end
-  end
+  expect(on(FrontendFrontPage).label_anonymous_element.when_not_visible).to_not be_visible
 end
 
 And(/^I click on the continue button$/) do

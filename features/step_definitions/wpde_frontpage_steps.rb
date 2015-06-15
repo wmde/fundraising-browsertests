@@ -45,11 +45,7 @@ And(/^The given amount should show$/) do
 end
 
 Then(/^The donation lightbox shows$/) do
-  on(WikipediaDeFrontPage) do |page|
-    page.wait_until do
-      page.form_donation_element.visible?
-    end
-  end
+  expect(on(WikipediaDeFrontPage).form_donation_element.when_visible).to be_visible
 end
 
 And(/^I switch to the new window$/) do

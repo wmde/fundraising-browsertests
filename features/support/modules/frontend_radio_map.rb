@@ -5,7 +5,7 @@ module FrontendRadioMap
   include PageObject
 
   def label_element_to_radio(radio_id)
-    browser.element(xpath: compose_label_xpath_for_radio(radio_id))
+    element('label', xpath: compose_label_xpath_for_radio(radio_id))
   end
 
   def lable_element_from_map(radio_name)

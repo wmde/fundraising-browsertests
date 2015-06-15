@@ -19,7 +19,7 @@ And(/^I enter random valid (private|business) address data$/) do |address_type|
 end
 
 Then(/^Address from should be visible$/) do
-  expect(on(FrontendFrontPage).input_city_element.visible?).to be true
+  expect(on(FrontendFrontPage).input_city_element.when_visible).to be_visible
 end
 
 And(/^I erase the city data field$/) do
