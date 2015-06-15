@@ -8,7 +8,7 @@ class FrontendDebitPage
     element('strong', xpath: '//p[contains(@class,\'title\')]/child::strong[1]')
   end
 
-  def donation_sepa_confirmation_element
+  def sepa_confirmation_element
     element('section', id: 'donation-sepa-confirmation')
   end
 end

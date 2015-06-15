@@ -2,7 +2,7 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Then(/^The debit confirmation form shows$/) do
-  expect(on(FrontendDebitPage).donation_sepa_confirmation_element.when_present).to be_present
+  expect(on(FrontendDebitPage).sepa_confirmation_element.when_present).to be_present
 end
 
 And(/^The debit donation amount should show (.*) Euro$/) do |amount|
