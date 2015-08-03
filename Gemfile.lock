@@ -120,7 +120,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
-  mediawiki_selenium
+  mediawiki_selenium (~> 1.5.0)
   parallel_tests
   require_all
   rubocop

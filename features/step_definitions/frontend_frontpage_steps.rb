@@ -80,7 +80,7 @@ And(/^I wait a second$/) do
 end
 
 Then(/^The amount display should show (.*) Euro$/) do |amount|
-  expect(on(FrontendFrontPage).donation_amount_element.text).to be == "#{amount}€"
+  expect(on(FrontendFrontPage).donation_amount_element.when_visible.text).to be == "#{amount}€"
 end
 
 When(/^I enter a valid random amount in the amount field$/) do
@@ -89,5 +89,5 @@ When(/^I enter a valid random amount in the amount field$/) do
 end
 
 Then(/^The amount display should show the given amount$/) do
-  expect(on(FrontendFrontPage).donation_amount_element.text).to be == "#{@amount},00€"
+  expect(on(FrontendFrontPage).donation_amount_element.when_visible.text).to be == "#{@amount},00€"
 end

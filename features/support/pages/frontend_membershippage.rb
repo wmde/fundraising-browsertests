@@ -22,8 +22,10 @@ class FrontendMembershipPage
   radio(:radio_amount1, id: 'amount-1')
   radio(:radio_amount2, id: 'amount-2')
   radio(:radio_amount3, id: 'amount-3')
+  radio(:radio_amount4, id: 'amount-4')
+  radio(:radio_amount5, id: 'amount-5')
 
-  text_field(:input_amount,  id: 'amount-6')
+  text_field(:input_amount,  id: 'amount-8')
 
   span(:span_confirm_name,  id: 'confirm-name')
   span(:span_confirm_street,  id: 'confirm-street')

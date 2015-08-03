@@ -11,18 +11,18 @@ end
 
 # Example data see http://www.iban-bic.com/sample_accounts.html
 And(/^I enter valid account data$/) do
-  on(FrontendFrontPage).input_account_number = '0648489890'
-  on(FrontendFrontPage).input_bank_code = '50010517'
+  on(FrontendFrontPage).input_account_number_element.when_visible.value = '0648489890'
+  on(FrontendFrontPage).input_bank_code_element.when_visible.value = '50010517'
 end
 
 And(/^I enter a valid german iban$/) do
-  on(FrontendFrontPage).input_iban = 'DE12500105170648489890'  # ###Fake
+  on(FrontendFrontPage).input_iban_element.when_visible.value = 'DE12500105170648489890'  # ###Fake
 end
 
 # Example data see http://www.unfcu.org/WorkArea/DownloadAsset.aspx?id=1056
 And(/^I enter a valid iban and bic$/) do
-  on(FrontendFrontPage).input_iban = 'BE68539007547034'  # ###Fake
-  on(FrontendFrontPage).input_bic = 'CITIBEBXXXX'
+  on(FrontendFrontPage).input_iban_element.when_visible.value = 'BE68539007547034'  # ###Fake
+  on(FrontendFrontPage).input_bic_element.when_visible.value = 'CITIBEBXXXX'
 end
 
 When(/^I confirm the debit contract$/) do

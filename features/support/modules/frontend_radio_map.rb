@@ -29,12 +29,6 @@ module FrontendRadioMap
       '100 euro' => 'amount-6',
       '250 euro' => 'amount-7',
 
-      '24 euro fee' => 'amount-1',
-      '50 euro fee' => 'amount-2',
-      '75 euro fee' => 'amount-3',
-      '100 euro fee' => 'amount-4',
-      '150 euro fee' => 'amount-5',
-
       'private donation' => 'address-type-1',
       'business donation' => 'address-type-2',
       'anonymous donation' => 'address-type-3',

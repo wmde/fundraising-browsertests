@@ -21,7 +21,7 @@ And(/^The lower fee rates should be (available|unavailable)$/) do |lower_fee|
   if lower_fee == 'available'
     on(FrontendReceiptPage) do |page|
       page.wait_until do
-        page.radio_amount1_element.attribute('disabled').equal? is_disabled
+        page.radio_amount3_element.attribute('disabled').equal? is_disabled
       end
     end
   end
@@ -30,13 +30,13 @@ And(/^The lower fee rates should be (available|unavailable)$/) do |lower_fee|
     is_disabled = 'true'
     on(FrontendReceiptPage) do |page|
       page.wait_until do
-        !page.radio_amount1_element.attribute('disabled').equal? nil
+        !page.radio_amount3_element.attribute('disabled').equal? nil
       end
     end
   end
 
-  expect(on(FrontendReceiptPage).radio_amount2_element.attribute('disabled')).equal? is_disabled
-  expect(on(FrontendReceiptPage).radio_amount3_element.attribute('disabled')).equal? is_disabled
+  expect(on(FrontendReceiptPage).radio_amount4_element.attribute('disabled')).equal? is_disabled
+  expect(on(FrontendReceiptPage).radio_amount5_element.attribute('disabled')).equal? is_disabled
 end
 
 And(/^I click on the done member button$/) do

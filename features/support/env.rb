@@ -16,3 +16,5 @@ end
 require_all 'features/support/utils'
 require_all 'features/support/modules'
 require_all 'features/support/pages'
+
+PageObject.default_element_wait = 10 # increased to avoid fails
