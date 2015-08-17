@@ -54,6 +54,16 @@ Run only tests with a specific tag
 bundle exec cucumber --tag @foo_bar
 ```
 
+Run only tests without a specific tag
+```shell
+bundle exec cucumber --tag ~@foo_bar
+```
+
+E.g.: Run frontend tests but no UI-only tests and no tests that use stuff deployed on test
+```shell
+bundle exec cucumber features/frontend.* --tag ~@only_online --tag ~@ui_only
+```
+
 ## Executing tests on Sauce Labs
 
 Uncomment Sauce Labs configuration in config.yml
