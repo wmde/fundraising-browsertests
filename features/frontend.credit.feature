@@ -1,6 +1,7 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
+@only_online
 Feature: Check the credit process on the frontend
 
   Background:

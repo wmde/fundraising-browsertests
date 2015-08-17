@@ -1,6 +1,7 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
+@ui_only
 Feature: Checks the ui on the wikipedia.de banner lightbox
 
   Background:
