@@ -9,6 +9,7 @@ Feature: Check the address validation on the frontend
     And I click on the continue button
     And The address details form shows
 
+  @ui_only
   Scenario Outline: Checks if insufficient address data stops the process
     And I select the private donation option
     And I enter random valid private address data
@@ -24,6 +25,7 @@ Feature: Check the address validation on the frontend
       | email |
       | postcode |
 
+  @ui_only
   Scenario Outline: Checks if invalid address data stops the process
     And I select the private donation option
     And I enter random valid private address data

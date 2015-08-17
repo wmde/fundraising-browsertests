@@ -10,6 +10,7 @@ Feature: Check the address validation on the wikipedia.de banner lightbox
     And The donation lightbox shows
     And The address details form shows
 
+  @ui_only
   Scenario Outline: Checks if insufficient address data stops the process
     And I select the private donation option
     And I enter random valid private address data
@@ -25,6 +26,7 @@ Feature: Check the address validation on the wikipedia.de banner lightbox
       | email |
       | postcode |
 
+  @ui_only
   Scenario Outline: Checks if invalid address data stops the process
     And I select the private donation option
     And I enter random valid private address data
