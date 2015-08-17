@@ -7,7 +7,7 @@ Feature: Check the paypal process on the frontend
     Given I am on the fundraising frontpage
     And I select the paypal donation option
 
-  @paypal
+
   Scenario Outline: Checks if the chosen value is displayed correctly
     When I select the <option> option
     And I click on the continue button
@@ -28,7 +28,7 @@ Feature: Check the paypal process on the frontend
     #| 100 euro | 100,00 |
     #| 250 euro | 250,00 |
 
-  @paypal
+  @only_online
   Scenario Outline: Check the non anonymous paypal donation
     Given I click on the continue button
     And The address details form shows
