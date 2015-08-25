@@ -24,3 +24,11 @@ end
 And(/^The send information text shows$/) do
   expect(on(FrontendReceiptPage).div_send_info_element.when_visible).to be_visible
 end
+
+When(/^I click on the cancel donation button$/) do
+  on(FrontendReceiptPage).button_cancel_element.when_visible.click
+end
+
+Then(/^The donation canceled page shows$/) do
+  expect(on(FrontendReceiptPage).h2_donation_canceled_element.when_visible).to be_visible
+end

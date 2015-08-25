@@ -38,6 +38,10 @@ class FrontendReceiptPage
 
   div(:div_error_box, xpath: '//div[contains(@class,\'errorbox\')][1]')
 
+  button(:button_cancel, xpath: '//input[@name=\'go_storno\'][1]')
+
+  h2(:h2_donation_canceled, xpath: '//h2[text()=\'Ihre Spende wurde storniert.\'][1]')
+
   def donation_amount_element
     element('strong', xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
   end
