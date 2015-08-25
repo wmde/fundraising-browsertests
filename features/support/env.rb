@@ -8,9 +8,7 @@ require 'require_all'
 
 config = YAML.load_file('config/config.yml')
 config.each do |k, v|
-  unless ENV["#{k}"]
-    ENV["#{k}"] = "#{v}"
-  end
+  ENV["#{k}"] = "#{v}" unless ENV["#{k}"]
 end
 
 require_all 'features/support/utils'
