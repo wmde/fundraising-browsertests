@@ -17,7 +17,7 @@ class FrontendFrontPage
   label(:label_anonymous, xpath: compose_label_xpath_for_radio('address-type-3'))
   label(:label_iban, xpath: compose_label_xpath_for_radio('debit-type-1'))
 
-  text_field(:input_amount,  id: 'amount-8')
+  text_field(:input_amount, id: 'amount-8')
 
   text_field(:input_iban, id: 'iban')
   text_field(:input_bic, id: 'bic')

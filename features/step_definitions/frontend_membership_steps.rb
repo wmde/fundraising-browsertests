@@ -59,6 +59,6 @@ Given(/^I am on the stand alone membership formpage$/) do
   visit(FrontendMembershipPage)
 end
 
-And(/^The membership type should be (sustaining|active)/) do  |membership_type|
+And(/^The membership type should be (sustaining|active)/) do |membership_type|
   expect(on(FrontendReceiptPage).hidden_membership_type_element.value).equal? membership_type
 end

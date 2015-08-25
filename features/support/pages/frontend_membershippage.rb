@@ -25,16 +25,16 @@ class FrontendMembershipPage
   radio(:radio_amount4, id: 'amount-4')
   radio(:radio_amount5, id: 'amount-5')
 
-  text_field(:input_amount,  id: 'amount-8')
+  text_field(:input_amount, id: 'amount-8')
 
-  span(:span_confirm_name,  id: 'confirm-name')
-  span(:span_confirm_street,  id: 'confirm-street')
-  span(:span_confirm_post_code,  id: 'confirm-postcode')
+  span(:span_confirm_name, id: 'confirm-name')
+  span(:span_confirm_street, id: 'confirm-street')
+  span(:span_confirm_post_code, id: 'confirm-postcode')
   span(:span_confirm_city,  id: 'confirm-city')
   span(:span_confirm_mail,  id: 'confirm-mail')
 
-  span(:span_confirm_account,  id: 'confirm-account-number')
-  span(:span_confirm_bic,  id: 'confirm-bic')
+  span(:span_confirm_account, id: 'confirm-account-number')
+  span(:span_confirm_bic, id: 'confirm-bic')
 
   div(:div_error_box, xpath: '//div[contains(@class,\'errorbox\')][1]')
 

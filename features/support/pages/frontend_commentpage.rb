@@ -9,6 +9,6 @@ class FrontendCommentPage
   div(:div_your_story, id: 'wlightbox-your-story')
   div(:div_positiv_feedback, id: 'positive-feedback')
 
-  text_area(:text_comment,  id: 'feedback-message')
-  button(:button_publish,  id: 'publishComment')
+  text_area(:text_comment, id: 'feedback-message')
+  button(:button_publish, id: 'publishComment')
 end
