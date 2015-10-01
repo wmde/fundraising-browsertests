@@ -39,7 +39,7 @@ And(/^I erase the email data field$/) do
 end
 
 And(/^I enter an invalid email/) do
-  on(FrontendFrontPage).input_email = 'test@reallynotavaliddomainforsuretobesure.complicated'
+  on(FrontendFrontPage).input_email = 'tdafsf'
 end
 
 And(/^I erase the postcode data field$/) do
