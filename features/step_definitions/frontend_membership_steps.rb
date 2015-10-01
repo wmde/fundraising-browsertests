@@ -48,7 +48,7 @@ Then(/^The membership confirmation shows$/) do
 end
 
 And(/^I enter (\d+) euro in the amount field$/) do |arg|
-  on(FrontendReceiptPage).input_amount = arg
+  on(FrontendReceiptPage).input_amount_element.when_visible.value = arg
 end
 
 Then(/^The error box shows$/) do
