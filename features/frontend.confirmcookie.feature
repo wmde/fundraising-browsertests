@@ -4,7 +4,9 @@
 Feature: Check the confirm cookie function on the frontend
 
   Background:
-    Given I finished a private debit donation with iban
+    Given I visit Wikipedia
+    And I reset the CentralNotice hide banner cookie
+    And I finished a private debit donation with iban
 
   Scenario: Checks if the confirmation cookie was set
     When I visit Wikipedia
