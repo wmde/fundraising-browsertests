@@ -38,7 +38,7 @@ Feature: Check the functions of the stand alone membership from
       And I enter random valid private address data
       And I erase the <field> data field
       And I click on the done member button
-    Then Address from should be visible
+    Then Address form should be visible
 
   Examples:
     | field |
@@ -56,7 +56,7 @@ Feature: Check the functions of the stand alone membership from
       And I enter random valid private address data
       And I enter an invalid <field>
       And I click on the done member button
-    Then Address from should be visible
+    Then Address form should be visible
 
   Examples:
     | field |
@@ -70,7 +70,7 @@ Feature: Check the functions of the stand alone membership from
       And I enter random valid business address data
       And I enter 10 euro in the amount field
       And I click on the done member button
-    Then Address from should be visible
+    Then Address form should be visible
 
   Scenario: Checks if the active membership is blocked for business
     When I select the business donation option
@@ -80,7 +80,7 @@ Feature: Check the functions of the stand alone membership from
       And I enter 10 euro in the amount field
       #And I select the active membership option
       And I click on the done member button
-    Then Address from should be visible
+    Then Address form should be visible
 
   Scenario: Checks if the membership is transmitted correctly
     When I select the private donation option

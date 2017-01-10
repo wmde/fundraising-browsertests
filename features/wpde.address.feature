@@ -17,7 +17,7 @@ Feature: Check the address validation on the wikipedia.de banner lightbox
     And I enter random valid private address data
     And I erase the <field> data field
     And I click on the done button
-    Then Address from should be visible
+    Then Address form should be visible
 
     Examples:
       | field |
@@ -33,7 +33,7 @@ Feature: Check the address validation on the wikipedia.de banner lightbox
     And I enter random valid private address data
     And I enter an invalid <field>
     And I click on the done button
-    Then Address from should be visible
+    Then Address form should be visible
 
     Examples:
       | field |

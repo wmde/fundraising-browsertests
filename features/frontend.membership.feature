@@ -51,7 +51,7 @@ Feature: Check the functions of the membership from
       And The address details form shows
       And I enter 10 euro in the amount field
     When I click on the done member button
-      Then Address from should be visible
+      Then Address form should be visible
 
 
 

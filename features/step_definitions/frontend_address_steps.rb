@@ -18,7 +18,7 @@ And(/^I enter random valid (private|business) address data$/) do |address_type|
   on(FrontendFrontPage).input_email = @address_data['email']
 end
 
-Then(/^Address from should be visible$/) do
+Then(/^Address form should be visible$/) do
   expect(on(FrontendFrontPage).personal_data_page_element).to be_visible
 end
 
