@@ -10,8 +10,12 @@ class FrontendFrontPage
 
   div(:div_period_regularly, css: 'div.periode-2-list')
 
-  button(:button_continue, id: 'continueFormSubmit')
-  button(:button_done, id: 'donFormSubmit')
+  div(:personal_data_page, id: 'personalDataPage')
+  div(:payment_page, id: 'paymentPage')
+
+  # TODO create methods for getting the elements, depending on current page
+  button(:button_continue, id: 'continueFormSubmit1')
+  button(:button_done, id: 'finishFormSubmit2')
 
   label(:label_private, xpath: compose_label_xpath_for_radio('address-type-1'))
   label(:label_anonymous, xpath: compose_label_xpath_for_radio('address-type-3'))
@@ -39,5 +43,18 @@ class FrontendFrontPage
 
   def donation_amount_element
     element('strong', xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
+  end
+
+  def label_element_from_map(radio_name)
+    prefix=''
+    radio_id = label_description_to_id(radio_name)
+    if radio_id =~ /(amount|payment-type|periode)/
+      if payment_page_element.visible?
+        prefix='form1-'
+      else
+        prefix='form2-'
+      end
+    end
+    label_element_to_radio(prefix + radio_id)
   end
 end
