@@ -18,6 +18,7 @@ Feature: Check the address validation on the frontend
     And I erase the <field> data field
     And I click on the done button
     Then Address form should be visible
+    And error message should be visible
 
     Examples:
       | field |
@@ -34,6 +35,7 @@ Feature: Check the address validation on the frontend
     And I enter an invalid <field>
     And I click on the done button
     Then Address form should be visible
+    And error message should be visible
 
     Examples:
       | field |

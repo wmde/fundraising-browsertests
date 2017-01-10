@@ -22,6 +22,10 @@ Then(/^Address form should be visible$/) do
   expect(on(FrontendFrontPage).personal_data_page_element).to be_visible
 end
 
+And(/^error message should be visible$/) do
+  expect(on(FrontendFrontPage).div_error_box_element).to be_visible
+end
+
 And(/^I erase the city data field$/) do
   on(FrontendFrontPage).input_city_element.clear
 end

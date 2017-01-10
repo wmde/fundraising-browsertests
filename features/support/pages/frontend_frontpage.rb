@@ -28,6 +28,8 @@ class FrontendFrontPage
   text_field(:input_account_number, id: 'account-number')
   text_field(:input_bank_code, id: 'bank-code')
 
+  div(:div_error_box, xpath: '//div[contains(@class,\'errorbox\')][1]')
+
   def random_address_data
     address_data = {}
     address_data['company-name'] = generate_random_string
