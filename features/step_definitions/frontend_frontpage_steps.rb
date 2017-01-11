@@ -68,7 +68,7 @@ Then(/^The anonymous option hides$/) do
 end
 
 And(/^I click on the continue button$/) do
-  sleep(1) # TODO find out how to get by without sleeping, at the moment this is a hack to allow for background validation until the continue button works
+  sleep(1) # TODO: find out how to get by without sleeping, at the moment this is a hack to allow for background validation until the continue button works
   on(FrontendFrontPage).button_continue_element.click
 end
 

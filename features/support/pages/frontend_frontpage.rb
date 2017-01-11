@@ -13,7 +13,7 @@ class FrontendFrontPage
   div(:personal_data_page, id: 'personalDataPage')
   div(:payment_page, id: 'paymentPage')
 
-  # TODO create methods for getting the elements, depending on current page
+  # TODO: create methods for getting the elements, depending on current page
   button(:button_continue, id: 'continueFormSubmit1')
   button(:button_done, id: 'finishFormSubmit2')
 
@@ -48,13 +48,13 @@ class FrontendFrontPage
   end
 
   def label_element_from_map(radio_name)
-    prefix=''
+    prefix = ''
     radio_id = label_description_to_id(radio_name)
     if radio_id =~ /(amount|payment-type|periode)/
       if payment_page_element.visible?
-        prefix='form1-'
+        prefix = 'form1-'
       else
-        prefix='form2-'
+        prefix = 'form2-'
       end
     end
     label_element_to_radio(prefix + radio_id)
