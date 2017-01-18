@@ -23,7 +23,7 @@ Then(/^Address form should be visible$/) do
 end
 
 And(/^error message should be visible$/) do
-  expect(on(FrontendFrontPage).div_error_box_element).to be_visible
+  expect(on(FrontendFrontPage).div_error_box_element.when_visible).to be_visible
 end
 
 And(/^I erase the city data field$/) do
@@ -51,5 +51,5 @@ And(/^I erase the postcode data field$/) do
 end
 
 And(/^I enter an invalid postcode$/) do
-  on(FrontendFrontPage).input_post_code = '2345'
+  on(FrontendFrontPage).input_post_code = 'ABCD'
 end
