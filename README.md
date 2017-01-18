@@ -7,25 +7,27 @@ See prerequisites on [Browser Testing for Wikidata](https://www.mediawiki.org/wi
 
 OR follow these steps (Linux):
 
-  \curl -L https://get.rvm.io | bash -s stable --ruby 
-  source /home/USERNAME/.rvm/scripts/rvm && rvm
-  
-  gem update --system
-  gem install bundler
-  bundle install
-  
-  git clone https://github.com/wmde/fundraising-browsertests.git
-  cd fundraising-browsertests
-  bundle install  
+    \curl -L https://get.rvm.io | bash -s stable --ruby 
+    source /home/USERNAME/.rvm/scripts/rvm && rvm
+    
+    gem update --system
+    gem install bundler
+    bundle install
+    
+    git clone https://github.com/wmde/fundraising-browsertests.git
+    cd fundraising-browsertests
+    bundle install  
 
 ## Configuration
 
 PayPal Sandbox parameters in config.yml
-  PAYPAL_USERNAME: ""
-  PAYPAL_PASSWORD: ""
+
+    PAYPAL_USERNAME: ""
+    PAYPAL_PASSWORD: ""
 
 Frontend URL
-  FRONTEND_URL: "http://localhost/frontend"
+
+    FRONTEND_URL: "http://localhost/frontend"
 
 ## Executing tests
 
