@@ -27,6 +27,10 @@ And(/^The address details form shows$/) do
   expect(on(FrontendFrontPage).personal_data_page_element).to be_visible
 end
 
+Then(/^The payment data form shows$/) do
+  expect(on(FrontendFrontPage).payment_page_element).to be_visible
+end
+
 Then(/^The company field (shows|hides)$/) do |visibility|
   value = visibility_to_boolean(visibility)
   on(FrontendFrontPage) do |page|
@@ -81,14 +85,16 @@ And(/^I wait a second$/) do
 end
 
 Then(/^The amount display should show (.*) Euro$/) do |amount|
-  expect(on(FrontendFrontPage).donation_amount_element.when_visible.text).to be == "#{amount}€"
+  expect(on(FrontendFrontPage).donation_amount_element.when_visible.text).to be == "#{amount} €"
 end
 
 When(/^I enter a valid random amount in the amount field$/) do
   @amount = generate_random_amount
   on(FrontendFrontPage).input_amount = @amount
+  # onChange event is not fired when Selenium "enters" the value, so we have to fire it ourselves
+  on(FrontendFrontPage).execute_script("$('#form1-amount-8').change()")
 end
 
 Then(/^The amount display should show the given amount$/) do
-  expect(on(FrontendFrontPage).donation_amount_element.when_visible.text).to be == "#{@amount},00€"
+  expect(on(FrontendFrontPage).donation_amount_element.when_visible.text).to be == "#{@amount},00 €"
 end

@@ -17,7 +17,7 @@ class FrontendFrontPage
   label(:label_anonymous, xpath: compose_label_xpath_for_radio('address-type-3'))
   label(:label_iban, xpath: compose_label_xpath_for_radio('debit-type-1'))
 
-  text_field(:input_amount, id: 'amount-8')
+  text_field(:input_amount, id: 'form1-amount-8')
 
   text_field(:input_iban, id: 'iban')
   text_field(:input_bic, id: 'bic')
@@ -56,7 +56,7 @@ class FrontendFrontPage
   end
 
   def donation_amount_element
-    element('strong', xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
+    element('span', css: '#donation-amount .amount-formatted')
   end
 
   def label_element_from_map(radio_name)

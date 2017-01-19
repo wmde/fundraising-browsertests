@@ -10,6 +10,7 @@ Feature: Checks the frontpage ui on the frontend
   @ui_only
   Scenario Outline: Checks if the account details shows and hides
     When I select the <donation_option> option
+    And I select the 5 euro option
     And I click on the continue button
     Then The IBAN details form <account_details_visibility>
 
@@ -21,9 +22,9 @@ Feature: Checks the frontpage ui on the frontend
     | paypal donation | hides                      |
 
   @ui_only
-  Scenario: Checks if the address form shows when continuing
+  Scenario: Checks if form stays the same when continuing
     When I click on the continue button
-    Then The address details form shows
+    Then The payment data form shows
 
   @ui_only
   Scenario Outline: Checks if the regularly bar shows and hides
@@ -38,6 +39,7 @@ Feature: Checks the frontpage ui on the frontend
   @ui_only
   Scenario Outline: Checks if the IBAN details shows and hides
     Given I select the debit donation option
+    And I select the 5 euro option
     And I click on the continue button
     When I select the <account_option> option
     Then The IBAN details form <iban_visibility>
@@ -51,6 +53,7 @@ Feature: Checks the frontpage ui on the frontend
   @ui_only
   Scenario Outline: Checks if the business data shows and hides
     Given I select the debit donation option
+    And I select the 5 euro option
     And I click on the continue button
     When I select the <donator_option> option
     Then The company field <company_visibility>
@@ -64,12 +67,14 @@ Feature: Checks the frontpage ui on the frontend
   @ui_only
   Scenario: Checks if the anonymous option hides on debit
     When I select the debit donation option
+    And I select the 5 euro option
     And I click on the continue button
     Then The anonymous option hides
 
   @ui_only
   Scenario Outline: Checks if the selectable amount displayed is correct
     When I select the <option> option
+    And I select the debit donation option
     And I click on the continue button
     Then The amount display should show <value> Euro
 
@@ -85,6 +90,7 @@ Feature: Checks the frontpage ui on the frontend
 
   @ui_only
   Scenario: Checks if the amount displayed is correct
-    When I enter a valid random amount in the amount field
+    And I enter a valid random amount in the amount field
+    And I select the deposit donation option
     And I click on the continue button
     Then The amount display should show the given amount
