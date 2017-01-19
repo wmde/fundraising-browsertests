@@ -13,10 +13,6 @@ class FrontendFrontPage
   div(:personal_data_page, id: 'personalDataPage')
   div(:payment_page, id: 'paymentPage')
 
-  # TODO: create methods for getting the elements, depending on current page
-  button(:button_continue, id: 'continueFormSubmit1')
-  button(:button_done, id: 'finishFormSubmit2')
-
   label(:label_private, xpath: compose_label_xpath_for_radio('address-type-1'))
   label(:label_anonymous, xpath: compose_label_xpath_for_radio('address-type-3'))
   label(:label_iban, xpath: compose_label_xpath_for_radio('debit-type-1'))
@@ -41,6 +37,22 @@ class FrontendFrontPage
     address_data['email'] = generate_random_string + '@example.com'
 
     address_data
+  end
+
+  def button_continue_element
+    if payment_page_element.visible?
+      element('button', css: '#continueFormSubmit1')
+    else
+      element('button', css: '#continueFormSubmit2')
+    end
+  end
+
+  def button_done_element
+    if personal_data_page_element.visible?
+      element('button', css: '#finishFormSubmit2')
+    else
+      element('button', css: '#finishFormSubmit3')
+    end
   end
 
   def donation_amount_element
