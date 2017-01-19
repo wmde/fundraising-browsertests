@@ -42,7 +42,5 @@ class FrontendReceiptPage
 
   h2(:h2_donation_canceled, xpath: '//h2[text()=\'Ihre Spende wurde storniert.\'][1]')
 
-  def donation_amount_element
-    element('strong', xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
-  end
+  span(:donation_amount, css: '#donation-amount .amount-formatted')
 end
