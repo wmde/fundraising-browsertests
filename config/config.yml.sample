@@ -15,6 +15,9 @@ PAYPAL_PASSWORD: ""
 # local browser configuration
 BROWSER: "firefox"
 
+# Needed for PayPal tests
+#BROWSER_TIMEOUT: 500
+
 # sauce browser configuration
 # uncomment to run on saucelabs
 #SAUCE_ONDEMAND_USERNAME: "SaucelabsUser"

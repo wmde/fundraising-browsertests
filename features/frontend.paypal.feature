@@ -30,13 +30,12 @@ Feature: Check the paypal process on the frontend
 
   @only_online
   Scenario Outline: Check the non anonymous paypal donation
-    Given I click on the continue button
+    Given I select the 15 euro option
+    And I click on the continue button
     And The address details form shows
     When I select the <address_type> donation option
     And I enter random valid <address_type> address data
-    And I wait a second
     And I click on the done button
-    And I wait a second
     And I login with my paypal credentials
     And I click on the paypal continue button
     And I click on the paypal back button
@@ -47,5 +46,3 @@ Feature: Check the paypal process on the frontend
     | address_type |
     | private |
     #| business |
-
-
