@@ -30,5 +30,9 @@ When(/^I click on the cancel donation button$/) do
 end
 
 Then(/^The donation canceled page shows$/) do
-  expect(on(FrontendReceiptPage).h2_donation_canceled_element.when_visible).to be_visible
+  on(FrontendReceiptPage) do |page|
+    page.wait_until(5) do
+      page.page_header_element.text.include? 'Ihre Spende wurde storniert'
+    end
+  end
 end

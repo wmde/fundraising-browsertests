@@ -40,7 +40,7 @@ class FrontendReceiptPage
 
   button(:button_cancel, xpath: '//input[@name=\'go_storno\'][1]')
 
-  h2(:h2_donation_canceled, xpath: '//h2[text()=\'Ihre Spende wurde storniert.\'][1]')
+  div(:page_header, xpath: '//div[contains(@class,\'box-header\')]')
 
   span(:donation_amount, css: '#donation-amount .amount-formatted')
 end
