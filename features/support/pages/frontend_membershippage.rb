@@ -4,20 +4,21 @@
 class FrontendMembershipPage
   include PageObject
   include FrontendAddressForm
+  include FrontendRadioMap
 
-  page_url ENV['FRONTEND_URL'] + 'spenden/Mitgliedschaft'
+  page_url ENV['FRONTEND_URL'] + 'page/MembershipApplication'
 
   div(:div_personal_data_sheet, id: 'personal-data')
 
-  div(:div_debit_confirmation, id: 'debit-donation-confirmation')
   div(:div_normal_confirmation, id: 'normal-donation-confirmation')
   div(:div_deposit_confirmation, id: 'deposit-donation-confirmation')
-  div(:div_membership_confirmation, id: 'sepa-membership-confirmation')
 
   div(:div_send_info, id: 'send-info')
 
   link(:a_become_member, id: 'become-member-button')
-  button(:button_done_member, id: 'memFormSubmit')
+  button(:button_continue_member, id: 'continueFormSubmit')
+  # TODO: implement as methods with dynamic selectors, depending on payment type.
+  button(:button_done_member, id: 'finishFormSubmit2')
 
   radio(:radio_amount1, id: 'amount-1')
   radio(:radio_amount2, id: 'amount-2')
@@ -27,18 +28,17 @@ class FrontendMembershipPage
 
   text_field(:input_amount, id: 'amount-8')
 
-  span(:span_confirm_name, id: 'confirm-name')
-  span(:span_confirm_street, id: 'confirm-street')
-  span(:span_confirm_post_code, id: 'confirm-postcode')
-  span(:span_confirm_city,  id: 'confirm-city')
-  span(:span_confirm_mail,  id: 'confirm-mail')
-
   span(:span_confirm_account, id: 'confirm-account-number')
   span(:span_confirm_bic, id: 'confirm-bic')
 
   div(:div_error_box, xpath: '//div[contains(@class,\'errorbox\')][1]')
 
+  def sepa_confirmation_element
+    element('section', id: 'membership-sepa-confirmation')
+  end
+
   def donation_amount_element
     element('strong', xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
   end
+
 end

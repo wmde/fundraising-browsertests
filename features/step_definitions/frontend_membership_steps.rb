@@ -40,7 +40,11 @@ And(/^The lower fee rates should be (available|unavailable)$/) do |lower_fee|
 end
 
 And(/^I click on the done member button$/) do
-  on(FrontendReceiptPage).button_done_member_element.click
+  on(FrontendMembershipPage).button_done_member_element.click
+end
+
+And(/^I click on the continue member button$/) do
+  on(FrontendMembershipPage).button_continue_member_element.click
 end
 
 Then(/^The membership confirmation shows$/) do
@@ -49,6 +53,10 @@ end
 
 And(/^I enter (\d+) euro in the amount field$/) do |arg|
   on(FrontendReceiptPage).input_amount_element.when_visible.value = arg
+end
+
+And(/^I select the (\d+ euro) fee$/) do |arg|
+  on(FrontendMembershipPage).lable_element_from_map(arg).when_visible.click
 end
 
 Then(/^The error box shows$/) do
@@ -61,4 +69,8 @@ end
 
 And(/^The membership type should be (sustaining|active)/) do |membership_type|
   expect(on(FrontendReceiptPage).hidden_membership_type_element.value).equal? membership_type
+end
+
+And(/^The debit confirmation form for membership shows$/) do
+  expect(on(FrontendMembershipPage).sepa_confirmation_element.when_visible).to be_visible
 end
