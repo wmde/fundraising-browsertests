@@ -7,6 +7,7 @@ Feature: Check the functions of the membership from
 
   Scenario Outline: Checks if valid address data is transmitted to the member form
     Given I am on the fundraising frontpage
+      And I select the 25 euro option
       And I select the deposit donation option
       And I click on the continue button
       And The address details form shows
@@ -29,11 +30,11 @@ Feature: Check the functions of the membership from
       And I click on the become member link
       And The address details form shows
       And I wait a second
-      And I select the <fee_option> option
-    When I click on the done member button
-      And The debit confirmation form shows
+      And I select the <fee_option> fee
+    When I click on the continue member button
+      And The debit confirmation form for membership shows
       And I confirm the debit contract
-      And I click on the done button
+      And I click on the done member button
     Then The membership confirmation shows
       And The private data on the receipt page should be the same
 
@@ -50,8 +51,5 @@ Feature: Check the functions of the membership from
       And I click on the become member link
       And The address details form shows
       And I enter 10 euro in the amount field
-    When I click on the done member button
-      Then Address from should be visible
-
-
-
+    When I click on the continue member button
+      Then Address form should be visible

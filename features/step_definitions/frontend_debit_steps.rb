@@ -2,11 +2,11 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Then(/^The debit confirmation form shows$/) do
-  expect(on(FrontendDebitPage).sepa_confirmation_element.when_present).to be_present
+  expect(on(FrontendDebitPage).sepa_confirmation_element.when_visible).to be_visible
 end
 
 And(/^The debit donation amount should show (.*) Euro$/) do |amount|
-  expect(on(FrontendDebitPage).donation_amount_element.text).to be == "#{amount}€"
+  expect(on(FrontendDebitPage).donation_amount_element.text).to be == "#{amount} €"
 end
 
 # Example data see http://www.iban-bic.com/sample_accounts.html

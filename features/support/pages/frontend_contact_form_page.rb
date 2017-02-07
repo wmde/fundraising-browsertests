@@ -4,15 +4,15 @@
 class FrontendContactFormPage
   include PageObject
 
-  page_url ENV['FRONTEND_URL'] + 'spenden/Kontaktformular'
+  page_url ENV['FRONTEND_URL'] + 'page/Kontaktformular'
 
-  text_field(:input_first_name, name: 'Vorname')
-  text_field(:input_last_name, name: 'Nachname')
-  text_field(:input_email, name: 'email')
-  text_field(:input_subject, name: 'Betreff')
-  text_area(:text_message, id: 'kommentar')
+  text_field(:input_first_name, id: 'first-name')
+  text_field(:input_last_name, id: 'last-name')
+  text_field(:input_email, id: 'email')
+  text_field(:input_subject, id: 'subject')
+  text_area(:text_message, id: 'messageBody')
 
-  button(:button_submit, name: 'go_contact')
+  button(:button_submit, id: 'contactFormSubmit')
 
   div(:error, class: 'errorbox')
 
@@ -25,6 +25,11 @@ class FrontendContactFormPage
     form_data['message'] = generate_random_string(100)
 
     form_data
+  end
+
+  def error_for_field(field_id)
+    field_id = 'messageBody' if field_id == 'message'
+    element(:span, css: '#' + field_id + ' ~ .form-error')
   end
 
 end

@@ -18,8 +18,12 @@ And(/^I enter random valid (private|business) address data$/) do |address_type|
   on(FrontendFrontPage).input_email = @address_data['email']
 end
 
-Then(/^Address from should be visible$/) do
-  expect(on(FrontendFrontPage).input_city_element.when_visible).to be_visible
+Then(/^Address form should be visible$/) do
+  expect(on(FrontendFrontPage).personal_data_page_element).to be_visible
+end
+
+And(/^error message should be visible$/) do
+  expect(on(FrontendFrontPage).div_error_box_element.when_visible).to be_visible
 end
 
 And(/^I erase the city data field$/) do
@@ -47,5 +51,5 @@ And(/^I erase the postcode data field$/) do
 end
 
 And(/^I enter an invalid postcode$/) do
-  on(FrontendFrontPage).input_post_code = '2345'
+  on(FrontendFrontPage).input_post_code = 'ABCD'
 end

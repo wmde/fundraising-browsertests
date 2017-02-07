@@ -6,6 +6,7 @@ Feature: Check the address validation on the frontend
 
   Background:
     Given I am on the fundraising frontpage
+    And I select the 5 euro option
     And I select the deposit donation option
     And I click on the continue button
     And The address details form shows
@@ -16,7 +17,8 @@ Feature: Check the address validation on the frontend
     And I enter random valid private address data
     And I erase the <field> data field
     And I click on the done button
-    Then Address from should be visible
+    Then Address form should be visible
+    And error message should be visible
 
     Examples:
       | field |
@@ -32,7 +34,8 @@ Feature: Check the address validation on the frontend
     And I enter random valid private address data
     And I enter an invalid <field>
     And I click on the done button
-    Then Address from should be visible
+    Then Address form should be visible
+    And error message should be visible
 
     Examples:
       | field |

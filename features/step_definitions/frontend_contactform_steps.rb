@@ -35,30 +35,13 @@ Given(/^I erase contents of the message field from the contact form$/) do
 end
 
 Then(/^The contact message confirmation page shows$/) do
-  expect(on(FrontendContactFormReceiptPage).header_element.when_visible).to be_visible
+  on(FrontendContactFormReceiptPage) do |page|
+    page.wait_until do
+      page.contact_message_sent_element.text.include?('Vielen Dank für Ihre Nachricht!')
+    end
+  end
 end
 
-Then(/^contains contact form acknowledgement message$/) do
-  expect(on(FrontendContactFormReceiptPage).contact_message_sent_element.when_visible).to be_visible
-  expect(on(FrontendContactFormReceiptPage).contact_message_sent).to include('Vielen Dank für Ihre Nachricht!')
-end
-
-Then(/^The error message shows$/) do
-  expect(on(FrontendContactFormPage).error_element.when_visible).to be_visible
-end
-
-Then(/^The error message is about the contact form missing value of last name$/) do
-  expect(on(FrontendContactFormPage).error).to include('Das Feld Nachname ist ein Pflichtfeld.')
-end
-
-Then(/^The error message is about the contact form missing value of email$/) do
-  expect(on(FrontendContactFormPage).error).to include('Das Feld E-Mail-Adresse ist ein Pflichtfeld.')
-end
-
-Then(/^The error message is about the contact form missing value of subject$/) do
-  expect(on(FrontendContactFormPage).error).to include('Das Feld Betreff ist ein Pflichtfeld.')
-end
-
-Then(/^The error message is about the contact form missing value of message/) do
-  expect(on(FrontendContactFormPage).error).to include('Bitte geben Sie Ihre Anfrage ein.')
+Then(/^The field (.*) has an error message/) do |field|
+  expect(on(FrontendContactFormPage).error_for_field(field).when_visible).to be_visible
 end

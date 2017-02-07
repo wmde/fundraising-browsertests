@@ -4,6 +4,6 @@
 class FrontendContactFormReceiptPage
   include PageObject
 
-  h2(:header, xpath: '//h2[./span[text()=\'Kontakt\']][1]')
-  paragraph(:contact_message_sent, xpath: '//main/div[contains(@class, \'container\')]/div[@id=\'greenBox\']/p[1]')
+  span(:header, css: '.box-header span')
+  div(:contact_message_sent, css: '#contact-form .box-section')
 end

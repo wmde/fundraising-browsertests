@@ -27,22 +27,20 @@ class FrontendReceiptPage
 
   text_field(:input_amount, id: 'amount-8')
 
-  span(:span_confirm_name, id: 'confirm-name')
-  span(:span_confirm_street, id: 'confirm-street')
-  span(:span_confirm_post_code, id: 'confirm-postcode')
-  span(:span_confirm_city,  id: 'confirm-city')
-  span(:span_confirm_mail,  id: 'confirm-mail')
+  span(:span_confirm_name, css: '.confirm-name')
+  span(:span_confirm_street, css: '.confirm-street')
+  span(:span_confirm_post_code, css: '.confirm-postcode')
+  span(:span_confirm_city,  css: '.confirm-city')
+  span(:span_confirm_mail,  css: '.confirm-email')
 
-  span(:span_confirm_account, id: 'confirm-account-number')
-  span(:span_confirm_bic, id: 'confirm-bic')
+  span(:span_confirm_account, css: '.confirm-account-number')
+  span(:span_confirm_bic, css: '.confirm-bic')
 
   div(:div_error_box, xpath: '//div[contains(@class,\'errorbox\')][1]')
 
   button(:button_cancel, xpath: '//input[@name=\'go_storno\'][1]')
 
-  h2(:h2_donation_canceled, xpath: '//h2[text()=\'Ihre Spende wurde storniert.\'][1]')
+  div(:page_header, xpath: '//div[contains(@class,\'box-header\')]')
 
-  def donation_amount_element
-    element('strong', xpath: '//span[contains(@class,\'icon-ok-sign\')]/child::strong[1]')
-  end
+  span(:donation_amount, css: '#donation-amount .amount-formatted')
 end

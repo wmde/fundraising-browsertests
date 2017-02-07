@@ -8,7 +8,7 @@ module FrontendRadioMap
     element('label', xpath: compose_label_xpath_for_radio(radio_id))
   end
 
-  def lable_element_from_map(radio_name)
+  def label_description_to_id(radio_name)
     radio_button_map = {
       'deposit donation' => 'payment-type-1',
       'credit donation' => 'payment-type-2',
@@ -41,7 +41,10 @@ module FrontendRadioMap
       'mrs' => 'salutation-1',
       'mr' => 'salutation-1'
     }
+    radio_button_map[radio_name]
+  end
 
-    label_element_to_radio(radio_button_map[radio_name])
+  def lable_element_from_map(radio_name)
+    label_element_to_radio(label_description_to_id(radio_name))
   end
 end

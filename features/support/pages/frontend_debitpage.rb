@@ -5,7 +5,7 @@ class FrontendDebitPage
   include PageObject
 
   def donation_amount_element
-    element('strong', xpath: '//p[contains(@class,\'title\')]/child::strong[1]')
+    element('span', css: '#donation-sepa-confirmation .amount-formatted')
   end
 
   def sepa_confirmation_element

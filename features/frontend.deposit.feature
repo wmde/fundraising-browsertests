@@ -30,7 +30,8 @@ Feature: Check the deposit process on the frontend
 
 
   Scenario Outline: Checks if valid address data leads to a correct receipt
-    Given I click on the continue button
+    Given I select the 5 euro option
+    And I click on the continue button
     And The address details form shows
     When I select the <address_type> donation option
     And I enter random valid <address_type> address data

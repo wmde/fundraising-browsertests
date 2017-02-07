@@ -17,7 +17,7 @@ Feature: Check the debit process on the frontend
     And I enter valid account data
     And I enter random valid private address data
     And I wait a second
-    And I click on the done button
+    And I click on the continue button
     Then The debit confirmation form shows
     And The debit donation amount should show <value> Euro
 
@@ -33,7 +33,8 @@ Feature: Check the debit process on the frontend
 
   @no_iban
   Scenario Outline: Checks the debit donation without IBAN
-    Given I click on the continue button
+    Given I select the 5 euro option
+    And I click on the continue button
     And The address details form shows
     When I select the noiban option
     And The account details form shows
@@ -41,7 +42,7 @@ Feature: Check the debit process on the frontend
     And I select the <address_type> donation option
     And I wait a second
     And I enter random valid <address_type> address data
-    And I click on the done button
+    And I click on the continue button
     Then The debit confirmation form shows
     And The <address_type> data on the receipt page should be the same
 
@@ -52,14 +53,15 @@ Feature: Check the debit process on the frontend
 
 
   Scenario Outline: Checks the debit donation with german IBAN
-    Given I click on the continue button
+    Given I select the 5 euro option
+    And I click on the continue button
     And The address details form shows
     When I select the iban option
     And I enter a valid german iban
     And I select the <address_type> donation option
     And I wait a second
     And I enter random valid <address_type> address data
-    And I click on the done button
+    And I click on the continue button
     Then The debit confirmation form shows
     And The <address_type> data on the receipt page should be the same
 
@@ -69,22 +71,24 @@ Feature: Check the debit process on the frontend
     | business |
 
   Scenario: Checks the debit donation with non german IBAN
-    Given I click on the continue button
+    Given I select the 5 euro option
+    And I click on the continue button
     And The address details form shows
     When I select the iban option
     And I enter a valid iban and bic
     And I enter random valid private address data
-    And I click on the done button
+    And I click on the continue button
     Then The debit confirmation form shows
     And The private data on the receipt page should be the same
 
   Scenario: Checks the debit donation approval
-    Given I click on the continue button
+    Given I select the 5 euro option
+    And I click on the continue button
     And The address details form shows
     And I select the iban option
     And I enter a valid german iban
     And I enter random valid private address data
-    And I click on the done button
+    And I click on the continue button
     And The debit confirmation form shows
     When I confirm the debit contract
     And I confirm the notification contract
