@@ -6,7 +6,7 @@ class FrontendMembershipPage
   include FrontendAddressForm
   include FrontendRadioMap
 
-  page_url ENV['FRONTEND_URL'] + 'page/MembershipApplication'
+  page_url ENV['FRONTEND_URL'] + 'page/Membership_Application'
 
   div(:div_personal_data_sheet, id: 'personal-data')
 
