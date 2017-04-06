@@ -2,11 +2,8 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Then(/^The credit card form shows$/) do
-  on(FrontendCreditPage) do |page|
-    page.wait_until do
-      page.input_holder_element.visible?
-    end
-  end
+  expect(on(FrontendCreditPage).micropayment_iframe_element.wait_until_present)
+  expect(on(FrontendCreditPage).input_holder_element.wait_until_present)
 end
 
 And(/^The cardholder should be the surname and name$/) do

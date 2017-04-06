@@ -43,5 +43,5 @@ Then(/^The contact message confirmation page shows$/) do
 end
 
 Then(/^The field (.*) has an error message/) do |field|
-  expect(on(FrontendContactFormPage).error_for_field(field).when_visible).to be_visible
+  expect(on(FrontendContactFormPage).error_for_field(field).wait_until_present)
 end

@@ -31,5 +31,5 @@ And(/^I click the submit comment button$/) do
 end
 
 Then(/^a positive feedback should show$/) do
-  expect(on(FrontendCommentPage).div_positiv_feedback_element.when_visible).to be_visible
+  expect(on(FrontendCommentPage).div_positiv_feedback_element.wait_until_present)
 end

@@ -2,11 +2,7 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 Then(/^The paypal form shows$/) do
-  on(FrontendPaypalPage) do |page|
-    page.wait_until do
-      page.div_xpt_content_main_element.visible?
-    end
-  end
+  expect(on(FrontendPaypalPage).div_xpt_content_main_element.wait_until_present)
 end
 
 And(/^The paypal should be the surname and name$/) do
@@ -19,6 +15,7 @@ And(/^The paypal donation amount should show (.*) Euro$/) do |amount|
 end
 
 And(/^I login with my paypal credentials$/) do
+  step('The paypal form shows')
   on(FrontendPaypalPage).input_login_email_element.when_visible.value = ENV['PAYPAL_USERNAME']
   on(FrontendPaypalPage).input_login_password_element.value = ENV['PAYPAL_PASSWORD']
   on(FrontendPaypalPage).button_login_element.click
@@ -26,7 +23,7 @@ end
 
 And(/^I click on the paypal continue button$/) do
   # This page takes a long time to load and the test may fail.
-  on(FrontendPaypalPage).button_continue_element.when_visible.click
+  on(FrontendPaypalPage).button_continue_element.wait_until_present.click
 end
 
 Then(/^The normal donation confirmation shows$/) do

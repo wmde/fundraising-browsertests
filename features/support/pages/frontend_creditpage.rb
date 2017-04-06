@@ -4,6 +4,8 @@
 class FrontendCreditPage
   include PageObject
 
+  element(:micropayment_iframe, id: 'micropayment-portal')
+
   in_iframe({ id: 'micropayment-portal' }) do |mcp_frame|
     text_field(:input_holder, id: 'holder', frame: mcp_frame)
     text_field(:input_card_number, id: 'card-number', frame: mcp_frame)
