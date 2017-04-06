@@ -22,16 +22,15 @@ And(/^I login with my paypal credentials$/) do
 end
 
 And(/^I click on the paypal continue button$/) do
-  # This page takes a long time to load and the test may fail.
-  on(FrontendPaypalPage).button_continue_element.wait_until_present.click
+  # paypal sandbox contains a tracking pixel that does not load, i.e. the DOM is never ready
+  # we need to submit the form despite this fact
+  sleep(10)
+  browser.execute_script("document.getElementById('continue').click()")
+  # @todo get the 'continue' string from page object - massive ruby foo required
 end
 
 Then(/^The normal donation confirmation shows$/) do
-  on(FrontendReceiptPage) do |page|
-    page.wait_until do
-      page.div_normal_confirmation_element.visible?
-    end
-  end
+  on(FrontendReceiptPage).div_normal_confirmation_element.wait_until_present
 end
 
 And(/^I click on the paypal back button$/) do
