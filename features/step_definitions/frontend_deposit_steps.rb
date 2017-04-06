@@ -6,5 +6,5 @@ And(/^The donation amount should show (.*) Euro$/) do |amount|
 end
 
 Then(/^The deposit donation confirmation shows$/) do
-  expect(on(FrontendReceiptPage).div_deposit_confirmation_element.when_visible).to be_visible
+  expect(on(FrontendReceiptPage).div_deposit_confirmation_element.wait_until_present)
 end

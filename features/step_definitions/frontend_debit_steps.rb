@@ -34,5 +34,5 @@ And(/^I confirm the notification contract$/) do
 end
 
 Then(/^The debit receipt shows$/) do
-  expect(on(FrontendReceiptPage).div_debit_confirmation_element.when_visible).to be_visible
+  expect(on(FrontendReceiptPage).div_debit_confirmation_element.wait_until_present)
 end

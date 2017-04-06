@@ -18,6 +18,9 @@ OR follow these steps (Linux):
     cd fundraising-browsertests
     bundle install  
 
+You have to have [geckodriver installed](https://stackoverflow.com/questions/40669953/watir-unable-to-find-mozilla-geckodriver) 
+for the tests to be able to interact with your browser.
+
 ## Configuration
 
 PayPal Sandbox parameters in config.yml

@@ -48,7 +48,7 @@ And(/^I click on the continue member button$/) do
 end
 
 Then(/^The membership confirmation shows$/) do
-  expect(on(FrontendReceiptPage).div_membership_confirmation_element.when_visible).to be_visible
+  expect(on(FrontendReceiptPage).div_membership_confirmation_element.wait_until_present)
 end
 
 And(/^I enter (\d+) euro in the amount field$/) do |arg|
