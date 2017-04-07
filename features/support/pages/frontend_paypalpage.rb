@@ -13,5 +13,10 @@ class FrontendPaypalPage
   text_field(:input_login_password, id: 'login_password')
   button(:button_login, id: 'login.x')
 
-  button(:button_continue, id: 'continue')
+  # id is reused in a step (explained there)
+  # rubocop:disable Style/ClassVars
+  @@continue_button_id = 'continue'
+  # rubocop:enable Style/ClassVars
+
+  button(:button_continue, id: @@continue_button_id)
 end

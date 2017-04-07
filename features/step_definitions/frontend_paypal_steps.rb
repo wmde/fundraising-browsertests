@@ -23,10 +23,10 @@ end
 
 And(/^I click on the paypal continue button$/) do
   # paypal sandbox contains a tracking pixel that does not load, i.e. the DOM is never ready
-  # we need to submit the form despite this fact
+  # we need to submit the form despite this fact, w/o using the page object
   sleep(10)
-  browser.execute_script("document.getElementById('continue').click()")
-  # @todo get the 'continue' string from page object - massive ruby foo required
+  button_id = FrontendPaypalPage.class_variable_get(:@@continue_button_id)
+  browser.execute_script("document.getElementById('" + button_id + "').click()")
 end
 
 Then(/^The normal donation confirmation shows$/) do
