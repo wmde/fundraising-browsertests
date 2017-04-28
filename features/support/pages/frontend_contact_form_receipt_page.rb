@@ -5,5 +5,5 @@ class FrontendContactFormReceiptPage
   include PageObject
 
   span(:header, css: '.box-header span')
-  div(:contact_message_sent, css: '#contact-form .box-section')
+  div(:contact_message_sent, css: '.sandboxedcontent.contact_confirmation')
 end
