@@ -4,7 +4,7 @@
 class FrontendContactFormPage
   include PageObject
 
-  page_url ENV['FRONTEND_URL'] + 'page/Kontaktformular'
+  page_url ENV['FRONTEND_URL'] + 'contact/get-in-touch'
 
   text_field(:input_first_name, id: 'first-name')
   text_field(:input_last_name, id: 'last-name')
