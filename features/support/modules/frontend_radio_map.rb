@@ -44,7 +44,7 @@ module FrontendRadioMap
     radio_button_map[radio_name]
   end
 
-  def lable_element_from_map(radio_name)
+  def label_element_from_map(radio_name)
     label_element_to_radio(label_description_to_id(radio_name))
   end
 end

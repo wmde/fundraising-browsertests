@@ -56,7 +56,7 @@ And(/^I enter (\d+) euro in the amount field$/) do |arg|
 end
 
 And(/^I select the (\d+ euro) fee$/) do |arg|
-  on(FrontendMembershipPage).lable_element_from_map(arg).when_visible.click
+  on(FrontendMembershipPage).label_element_from_map(arg).when_visible.click
 end
 
 Then(/^The error box shows$/) do
@@ -73,4 +73,12 @@ end
 
 And(/^The debit confirmation form for membership shows$/) do
   expect(on(FrontendMembershipPage).sepa_confirmation_element.when_visible).to be_visible
+end
+
+Then(/^The (.*) option is not offered$/) do |radio_name|
+  expect(on(FrontendMembershipPage).label_element_from_map(radio_name).visible?).to be false
+end
+
+Then(/^The private donation option is checked$/) do
+  expect(on(FrontendMembershipPage).radio_member_private_element.checked?).to be true
 end
