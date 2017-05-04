@@ -2,6 +2,7 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 @ui_only
+@banner_campaign
 Feature: Check the address validation on the wikipedia.de banner lightbox
 
   Background:

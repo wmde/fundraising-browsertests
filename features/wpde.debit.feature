@@ -1,13 +1,13 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
+@banner_campaign
 Feature: Check the debit process on the wikipedia.de banner lightbox
 
   Background:
     Given I am on the wikipedia.de frontpage
     And The wikipedia.de lightbox banner shows
     And I change the lightbox to testmode
-
 
   Scenario Outline: Checks if debit donation transfers the transfers the right amount
     When I click the banner <option> amount option
