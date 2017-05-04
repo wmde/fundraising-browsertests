@@ -6,7 +6,7 @@ class FrontendMembershipPage
   include FrontendAddressForm
   include FrontendRadioMap
 
-  page_url ENV['FRONTEND_URL'] + 'page/Membership_Application'
+  page_url ENV['FRONTEND_URL'] + 'apply-for-membership'
 
   div(:div_personal_data_sheet, id: 'personal-data')
 
@@ -25,6 +25,9 @@ class FrontendMembershipPage
   radio(:radio_amount3, id: 'amount-3')
   radio(:radio_amount4, id: 'amount-4')
   radio(:radio_amount5, id: 'amount-5')
+
+  radio(:radio_member_private, id: 'address-type-1')
+  radio(:radio_member_business, id: 'address-type-2')
 
   text_field(:input_amount, id: 'amount-8')
 

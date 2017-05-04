@@ -72,15 +72,23 @@ Feature: Check the functions of the stand alone membership from
       And I click on the continue member button
     Then Address form should be visible
 
+  Scenario: Checks if business is hidden for active membership
+    When I select the active membership option
+    Then The business donation option is not offered
+    And The private donation option is checked
+
   Scenario: Checks if the active membership is blocked for business
     When I select the business donation option
       And I select the iban option
       And I enter a valid german iban
       And I enter random valid business address data
       And I enter 10 euro in the amount field
-      #And I select the active membership option
+      And I select the active membership option
       And I click on the continue member button
     Then Address form should be visible
+    And The error box shows
+    And The private donation option is checked
+    And The business donation option is not offered
 
   Scenario: Checks if the membership is transmitted correctly
     When I select the private donation option
