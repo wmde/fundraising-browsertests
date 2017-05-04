@@ -19,7 +19,7 @@ OR follow these steps (Linux):
     bundle install  
 
 You have to have [geckodriver installed](https://stackoverflow.com/questions/40669953/watir-unable-to-find-mozilla-geckodriver) 
-for the tests to be able to interact with your browser.
+(1.15 or later for modern browsers) for the tests to be able to interact with your browser.
 
 ## Configuration
 
