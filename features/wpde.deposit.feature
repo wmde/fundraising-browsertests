@@ -1,6 +1,7 @@
 # @licence GNU GPL v2+
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
+@banner_campaign
 Feature: Check the deposit process on the wikipedia.de banner lightbox
 
   Background:

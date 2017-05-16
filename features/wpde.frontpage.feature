@@ -2,6 +2,7 @@
 # @author Christoph Fischer <christoph.fischer@wikimedia.de>
 
 @ui_only
+@banner_campaign
 Feature: Checks the ui on the wikipedia.de banner lightbox
 
   Background:

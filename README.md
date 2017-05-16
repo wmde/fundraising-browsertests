@@ -34,14 +34,20 @@ Frontend URL
 
 ## Executing tests
 
-Update/install gems
-```shell
-bundle update
-```
+Tests are organized in *feature*s that have a *background* and one or more *scenario*s.
+Each feature and/or scenario can be [tagged](https://github.com/cucumber/cucumber/wiki/Tags) to
+organise the tests.
 
-Run all tests
+Run all tests (as per the [*default* profile](config/cucumber.yml))
 ```shell
 bundle exec cucumber
+```
+
+### More complex invocation options
+
+Run all (really all) tests
+```shell
+bundle exec cucumber -P
 ```
 
 Run a specific feature
